@@ -1,0 +1,141 @@
+{
+  "date": "2026-02-20",
+  "racecourse": "Meydan",
+  "country": "UAE",
+  "surface": "Mixed (Turf & Dirt)",
+  "races": [
+    {
+      "raceNumber": 1,
+      "raceName": "Maiden",
+      "raceTime": "17:30",
+      "surface": "Turf",
+      "distance": "6f",
+      "prize": "AED 165,000",
+      "runners": [
+        {"name": "Key Of Magic", "odds": "9/4", "form": "favorite"},
+        {"name": "Hidden Secret", "odds": "3/1", "form": "contender"},
+        {"name": "Sucette", "odds": "10/3", "form": "dangerous"},
+        {"name": "Magic Art", "odds": "8/1", "form": "outsider"},
+        {"name": "Diamondaires Will", "odds": "8/1", "form": "outsider"},
+        {"name": "Raasil", "odds": "12/1", "form": "outsider"},
+        {"name": "Volcanic Rock", "odds": "20/1", "form": "longshot"},
+        {"name": "Willoch", "odds": "25/1", "form": "longshot"}
+      ]
+    },
+    {
+      "raceNumber": 2,
+      "raceName": "DEEPAL S07 Handicap",
+      "raceTime": "18:05",
+      "surface": "Turf",
+      "distance": "6f",
+      "rating": "80-100",
+      "prize": "AED 165,000",
+      "runners": [
+        {"name": "Desperate Hero", "odds": "9/4", "form": "favorite"},
+        {"name": "Lahfaty", "odds": "5/2", "form": "contender"},
+        {"name": "Shaq Diesel", "odds": "3/1", "form": "dangerous"},
+        {"name": "Strobe", "odds": "4/1", "form": "dangerous"},
+        {"name": "Khanjar", "odds": "5/1", "form": "outsider"},
+        {"name": "Zandvoort", "odds": "8/1", "form": "outsider"},
+        {"name": "Go Chrome Go", "odds": "20/1", "form": "longshot"},
+        {"name": "African Candy", "odds": "25/1", "form": "longshot"},
+        {"name": "Shootout", "odds": "33/1", "form": "longshot"}
+      ]
+    },
+    {
+      "raceNumber": 3,
+      "raceName": "DEEPAL S05 Maiden",
+      "raceTime": "15:25",
+      "surface": "Turf",
+      "prize": "AED 165,000",
+      "runners": [
+        {"name": "Chibitty", "odds": "evens", "form": "favorite"},
+        {"name": "Dividend", "odds": "7/2", "form": "contender"},
+        {"name": "Acapulco Bay", "odds": "5/1", "form": "dangerous"},
+        {"name": "Al Aali", "odds": "6/1", "form": "outsider"},
+        {"name": "Claymore", "odds": "8/1", "form": "outsider"},
+        {"name": "Rajeko", "odds": "10/1", "form": "longshot"}
+      ]
+    },
+    {
+      "raceNumber": 4,
+      "raceName": "Touch The Future Handicap",
+      "raceTime": "15:25",
+      "surface": "Turf",
+      "prize": "AED 165,000",
+      "runners": [
+        {"name": "Cat Belling", "odds": "9/4", "form": "favorite"},
+        {"name": "Catstyle", "odds": "3/1", "form": "contender"},
+        {"name": "Charming Life", "odds": "4/1", "form": "dangerous"},
+        {"name": "Diamondaires Will", "odds": "6/1", "form": "outsider"},
+        {"name": "Hidden Secret", "odds": "10/1", "form": "longshot"}
+      ]
+    },
+    {
+      "raceNumber": 5,
+      "raceName": "Handicap",
+      "raceTime": "16:00",
+      "surface": "Turf",
+      "prize": "AED 165,000",
+      "runners": [
+        {"name": "Dubai Beach", "odds": "5/2", "form": "favorite"},
+        {"name": "Dubai Treasure", "odds": "3/1", "form": "contender"},
+        {"name": "Al Khawaneej", "odds": "4/1", "form": "dangerous"}
+      ]
+    },
+    {
+      "raceNumber": 6,
+      "raceName": "Balanchine (Group 2)",
+      "raceTime": "16:35",
+      "surface": "Turf",
+      "distance": "1m 1f",
+      "grade": "Group 2",
+      "sex": "Fillies and Mares",
+      "prize": "AED 486,284",
+      "runners": [
+        {"name": "Dubai Beach", "odds": "5/2", "form": "favorite"},
+        {"name": "Dubai Treasure", "odds": "3/1", "form": "contender"},
+        {"name": "Mystery Dream", "odds": "4/1", "form": "dangerous"},
+        {"name": "Royal Touch", "odds": "6/1", "form": "outsider"},
+        {"name": "Desert Rose", "odds": "8/1", "form": "outsider"},
+        {"name": "Golden Pearl", "odds": "10/1", "form": "longshot"},
+        {"name": "Silver Storm", "odds": "12/1", "form": "longshot"}
+      ]
+    },
+    {
+      "raceNumber": 7,
+      "raceName": "Dubai Road to Kentucky Derby (Listed)",
+      "raceTime": "17:10",
+      "surface": "Dirt",
+      "distance": "1m",
+      "grade": "Listed",
+      "prize": "AED 250,000",
+      "runners": [
+        {"name": "Salloom", "odds": "7/4", "form": "favorite"},
+        {"name": "Lino Padrino", "odds": "10/3", "form": "contender"},
+        {"name": "Watch Collector", "odds": "13/2", "form": "dangerous"},
+        {"name": "Omaha Front", "odds": "15/2", "form": "dangerous"},
+        {"name": "Raajehh", "odds": "8/1", "form": "outsider"},
+        {"name": "Brotherly Love", "odds": "10/1", "form": "outsider"},
+        {"name": "Al Khawaneej", "odds": "15/2", "form": "dangerous"},
+        {"name": "Sary Shayan", "odds": "25/1", "form": "longshot"}
+      ]
+    },
+    {
+      "raceNumber": 8,
+      "raceName": "Nad Al Sheba Trophy",
+      "raceTime": "17:45",
+      "surface": "Turf",
+      "distance": "1m 4f",
+      "grade": "Listed",
+      "prize": "AED 350,000",
+      "runners": [
+        {"name": "Al Nayyir", "odds": "5/2", "form": "favorite"},
+        {"name": "Dubai Legend", "odds": "3/1", "form": "contender"},
+        {"name": "Desert Storm", "odds": "4/1", "form": "dangerous"},
+        {"name": "Golden Safari", "odds": "6/1", "form": "outsider"},
+        {"name": "Royal Command", "odds": "8/1", "form": "outsider"}
+      ]
+    }
+  ]
+}

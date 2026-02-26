@@ -1,0 +1,237 @@
+// Elghali AI - Horse Racing Prediction System
+// Professional Database Schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ==================== RACING DATA ====================
+
+model RaceDay {
+  id          String   @id @default(cuid())
+  date        String   @unique // Format: YYYY-MM-DD
+  racecourse  String
+  country     String
+  status      String   @default("upcoming") // upcoming, live, completed
+  weather     String?
+  going       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  races       Race[]
+  
+  @@index([date])
+  @@index([racecourse])
+  @@index([country])
+}
+
+model Race {
+  id            String   @id @default(cuid())
+  raceDayId     String
+  number        Int
+  name          String
+  time          String
+  distance      Int      // in meters
+  surface       String   // Dirt, Turf, All-Weather, Sand
+  going         String?
+  raceType      String   // Maiden, Handicap, Stakes, Group
+  raceClass     String?
+  prize         Int?
+  prizeCurrency String   @default("AED")
+  liveStreamUrl String?
+  
+  // Results
+  resultStatus  String   @default("pending") // pending, completed
+  resultFetchedAt DateTime?
+  
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  raceDay       RaceDay  @relation(fields: [raceDayId], references: [id], onDelete: Cascade)
+  horses        Horse[]
+  predictions   Prediction[]
+  results       RaceResult[]
+  
+  @@unique([raceDayId, number])
+  @@index([raceDayId])
+}
+
+model Horse {
+  id            String   @id @default(cuid())
+  raceId        String
+  number        Int
+  name          String
+  nameAr        String?
+  
+  // Details
+  jockey        String
+  jockeyWeight  Float?
+  trainer       String
+  rating        Int?
+  weight        Float?   // in kg
+  draw          Int?
+  age           Int?
+  sex           String?
+  color         String?
+  
+  // Form & Performance
+  form          String?
+  lastRunDate   String?
+  daysSinceRun  Int?
+  
+  // Pedigree
+  sire          String?
+  dam           String?
+  damsire       String?
+  
+  // Market
+  odds          String?
+  oddsDecimal   Float?
+  isFavorite    Boolean  @default(false)
+  
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  race          Race     @relation(fields: [raceId], references: [id], onDelete: Cascade)
+  predictions   Prediction[]
+  results       RaceResult[]
+  
+  @@unique([raceId, number])
+  @@index([raceId])
+  @@index([name])
+}
+
+model Prediction {
+  id              String   @id @default(cuid())
+  raceId          String
+  horseId         String
+  
+  // Prediction Scores (0-100)
+  powerScore      Float
+  winProbability  Float
+  placeProbability Float
+  
+  // Factor Scores
+  speedScore      Float    @default(50)
+  formScore       Float    @default(50)
+  classScore      Float    @default(50)
+  jockeyScore     Float    @default(50)
+  trainerScore    Float    @default(50)
+  distanceScore   Float    @default(50)
+  surfaceScore    Float    @default(50)
+  goingScore      Float    @default(50)
+  drawScore       Float    @default(50)
+  weightScore     Float    @default(50)
+  paceScore       Float    @default(50)
+  pedigreeScore   Float    @default(50)
+  courseScore     Float    @default(50)
+  trendScore      Float    @default(50)
+  marketScore     Float    @default(50)
+  
+  // Analysis
+  rank            Int?
+  analysis        String?
+  strengths       String?  // JSON array
+  concerns        String?  // JSON array
+  valueRating     String   @default("Fair") // Excellent, Good, Fair, Poor
+  
+  // Verification
+  predictedPosition Int?
+  actualPosition    Int?
+  verified        Boolean  @default(false)
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  race            Race     @relation(fields: [raceId], references: [id], onDelete: Cascade)
+  horse           Horse    @relation(fields: [horseId], references: [id], onDelete: Cascade)
+  
+  @@unique([raceId, horseId])
+  @@index([raceId])
+  @@index([horseId])
+}
+
+model RaceResult {
+  id              String   @id @default(cuid())
+  raceId          String
+  horseId         String
+  
+  position        Int
+  time            String?
+  distanceBeaten  String?
+  prize           Float?
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  race            Race     @relation(fields: [raceId], references: [id], onDelete: Cascade)
+  horse           Horse    @relation(fields: [horseId], references: [id], onDelete: Cascade)
+  
+  @@unique([raceId, horseId])
+  @@index([raceId])
+}
+
+// ==================== USER INTERACTION ====================
+
+model UserFeedback {
+  id            String   @id @default(cuid())
+  email         String?
+  feedback      String
+  rating        Int?     // 1-5 stars
+  raceDate      String?
+  racecourse    String?
+  isRead        Boolean  @default(false)
+  
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  @@index([createdAt])
+}
+
+model EmailLog {
+  id            String   @id @default(cuid())
+  to            String
+  subject       String
+  status        String   // pending, sent, failed
+  errorMessage  String?
+  pdfPath       String?
+  
+  createdAt     DateTime @default(now())
+  
+  @@index([to])
+  @@index([createdAt])
+}
+
+// ==================== ANALYTICS ====================
+
+model PredictionAccuracy {
+  id              String   @id @default(cuid())
+  date            String
+  racecourse      String
+  totalRaces      Int
+  correctWinners  Int      // Predictions that won
+  correctPlaces    Int      // Predictions that placed
+  napAccuracy     Float?   // NAP success rate
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  @@unique([date, racecourse])
+}
+
+// ==================== SYSTEM ====================
+
+model SystemConfig {
+  id            String   @id @default(cuid())
+  key           String   @unique
+  value         String
+  description   String?
+  
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}

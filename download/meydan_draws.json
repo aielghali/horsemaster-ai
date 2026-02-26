@@ -1,0 +1,54 @@
+{
+  "date": "2026-02-20",
+  "venue": "Meydan",
+  "races": [
+    {
+      "raceNumber": 1,
+      "time": "17:30",
+      "name": "DEEPAL S05 - MAIDEN",
+      "entries": []
+    },
+    {
+      "raceNumber": 2,
+      "time": "18:05",
+      "name": "DEEPAL S07 - HANDICAP",
+      "entries": []
+    },
+    {
+      "raceNumber": 3,
+      "time": "18:40",
+      "name": "UAE OAKS",
+      "entries": []
+    },
+    {
+      "raceNumber": 4,
+      "time": "19:15",
+      "name": "Touch The Future",
+      "entries": []
+    },
+    {
+      "raceNumber": 5,
+      "time": "19:50",
+      "name": "DEEPAL Super Hybrid",
+      "entries": []
+    },
+    {
+      "raceNumber": 6,
+      "time": "20:25",
+      "name": "BALANCHINE (Group 2)",
+      "entries": []
+    },
+    {
+      "raceNumber": 7,
+      "time": "21:00",
+      "name": "KENTUCKY DERBY TRIAL",
+      "entries": []
+    },
+    {
+      "raceNumber": 8,
+      "time": "21:45",
+      "name": "NAD AL SHEBA TROPHY",
+      "entries": []
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HorseMaster - ترشيحات سباقات الخيل العالمية</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🏇</span>
+                <div class="logo-text">
+                    <h1>HorseMaster</h1>
+                    <p>ترشيحات سباقات الخيل الذكية</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button id="langToggle" class="btn btn-outline">
+                    <i class="fas fa-globe"></i> English
+                </button>
+                <span class="version">v2.0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>🐎 نظام الترشيحات الذكي</h2>
+                <p>تحليل 17+ عامل لكل حصان - بيانات حقيقية من المصادر</p>
+                <div class="supported-countries">
+                    <span class="flag">🇦🇪</span>
+                    <span class="flag">🇬🇧</span>
+                    <span class="flag">🇦🇺</span>
+                    <span class="flag">🇺🇸</span>
+                    <span class="flag">🇫🇷</span>
+                    <span class="flag">🇮🇪</span>
+                    <span class="flag">🇸🇦</span>
+                    <span class="flag">🇶🇦</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Selection Card -->
+            <div class="card selection-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-search"></i> اختر السباق</h3>
+                </div>
+                <div class="card-body">
+                    <div class="form-grid">
+                        <!-- Country -->
+                        <div class="form-group">
+                            <label><i class="fas fa-globe"></i> الدولة</label>
+                            <select id="countrySelect" class="form-control">
+                                <option value="">اختر الدولة</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Track -->
+                        <div class="form-group">
+                            <label><i class="fas fa-map-marker-alt"></i> المضمار</label>
+                            <select id="trackSelect" class="form-control" disabled>
+                                <option value="">اختر المضمار</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Date -->
+                        <div class="form-group">
+                            <label><i class="fas fa-calendar"></i> التاريخ</label>
+                            <input type="date" id="dateInput" class="form-control">
+                        </div>
+                    </div>
+                    
+                    <button id="getPredictions" class="btn btn-primary btn-lg btn-block" disabled>
+                        <i class="fas fa-magic"></i> احصل على الترشيحات
+                    </button>
+                </div>
+            </div>
+
+            <!-- Loading -->
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>جاري تحليل السباقات...</p>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results" class="results hidden">
+                <!-- Header -->
+                <div class="results-header">
+                    <div class="results-info">
+                        <h3 id="trackName">Meydan Racecourse</h3>
+                        <p id="resultsDate">2026-02-25</p>
+                        <span id="totalRaces" class="badge">8 سباقات</span>
+                    </div>
+                    <button id="newSearch" class="btn btn-outline">
+                        <i class="fas fa-redo"></i> بحث جديد
+                    </button>
+                </div>
+
+                <!-- NAP Section -->
+                <div class="nap-card">
+                    <div class="nap-header">
+                        <i class="fas fa-crown"></i>
+                        <h3>ترشيح اليوم (NAP)</h3>
+                    </div>
+                    <div class="nap-content">
+                        <h2 id="napHorse">Thunder Strike</h2>
+                        <p id="napRace">Race 3 - 15:30</p>
+                        <p id="napReason">أعلى نقاط قوة مع فورم ممتاز</p>
+                        <div class="confidence-bar">
+                            <div class="confidence-label">
+                                <span>الثقة</span>
+                                <span id="napConfidence">85%</span>
+                            </div>
+                            <div class="progress">
+                                <div id="confidenceProgress" class="progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Picks -->
+                <div class="quick-picks">
+                    <div class="pick-card">
+                        <h4><i class="fas fa-arrow-up"></i> الترشيح الثاني</h4>
+                        <p id="nextBestHorse" class="horse-name">Golden Arrow</p>
+                        <p id="nextBestRace" class="race-name">Race 5</p>
+                        <p id="nextBestReason" class="reason">قيمة ممتازة</p>
+                    </div>
+                    <div class="pick-card">
+                        <h4><i class="fas fa-gem"></i> ترشيح القيمة</h4>
+                        <p id="valuePickHorse" class="horse-name">Speed Demon</p>
+                        <p id="valuePickRace" class="race-name">Race 7</p>
+                        <p id="valuePickReason" class="reason">احتمالات عالية</p>
+                    </div>
+                </div>
+
+                <!-- Race Tabs -->
+                <div class="races-section">
+                    <div class="races-header">
+                        <h3><i class="fas fa-list"></i> جميع السباقات</h3>
+                    </div>
+                    <div id="raceTabs" class="race-tabs">
+                        <!-- Tabs will be inserted here -->
+                    </div>
+                    <div id="raceContent" class="race-content">
+                        <!-- Race content will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>HorseMaster</h4>
+                    <p>نظام ترشيحات سباقات الخيل الذكي</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#"><i class="fas fa-envelope"></i> تواصل معنا</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> حول</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2026 HorseMaster - جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

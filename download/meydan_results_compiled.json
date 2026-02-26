@@ -1,0 +1,60 @@
+{
+  "1": {
+    "name": "DEEPAL S05 - MAIDEN",
+    "winner": "Meydan (UAE)",
+    "places": [
+      "Southwell (AW)",
+      "Meydan (UAE)"
+    ]
+  },
+  "2": {
+    "name": "DEEPAL S07 - HANDICAP",
+    "winner": "Major Cinnamon (USA)",
+    "places": [
+      "Dyonisos (FR)",
+      "Miss Yechance (IRE)"
+    ]
+  },
+  "3": {
+    "name": "UAE OAKS",
+    "winner": "LABWAH (USA)",
+    "places": [
+      "YUNO (USA)",
+      "DOZALLA (USA)"
+    ]
+  },
+  "4": {
+    "name": "Touch The Future",
+    "winner": null,
+    "places": [
+      "MASAI MOON",
+      "WAR SOCKS"
+    ]
+  },
+  "5": {
+    "name": "DEEPAL Super Hybrid",
+    "winner": null,
+    "places": []
+  },
+  "6": {
+    "name": "BALANCHINE (Group 2)",
+    "winner": "BLUE NAZARE (IRE)",
+    "places": [
+      "DUBAI BEACH (IRE)",
+      "RIYABOVKA (FR)"
+    ]
+  },
+  "7": {
+    "name": "Kentucky Derby Trial",
+    "winner": null,
+    "places": []
+  },
+  "8": {
+    "name": "NAD AL SHEBA TROPHY (Group 3)",
+    "winner": "SUNWAY (FR)",
+    "places": [
+      "AL NAYYIR (GB)",
+      "BY THE BOOK (IRE)"
+    ]
+  }
+}

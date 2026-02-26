@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elghali AI - Meydan 2026-02-22</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #fef3e2 0%, #ffffff 100%);
+      color: #333;
+      line-height: 1.6;
+      direction: rtl;
+    }
+    
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 15mm;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #8B0000 0%, #A52A2A 100%);
+      color: white;
+      padding: 25px;
+      text-align: center;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    
+    .logo {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    
+    .header h1 {
+      color: #D4AF37;
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+    
+    .header .subtitle {
+      color: #f0e6d3;
+      font-size: 14px;
+    }
+    
+    .meta-info {
+      display: flex;
+      justify-content: space-around;
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #e0e0e0;
+    }
+    
+    .meta-item {
+      text-align: center;
+    }
+    
+    .meta-value {
+      font-size: 18px;
+      font-weight: bold;
+      color: #8B0000;
+    }
+    
+    .meta-label {
+      font-size: 12px;
+      color: #666;
+    }
+    
+    .nap-section {
+      background: linear-gradient(135deg, #FFF8DC 0%, #FFFACD 100%);
+      border: 2px solid #D4AF37;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .nap-title {
+      font-size: 14px;
+      color: #8B0000;
+      margin-bottom: 10px;
+    }
+    
+    .nap-horse {
+      font-size: 28px;
+      font-weight: bold;
+      color: #D4AF37;
+      margin-bottom: 5px;
+    }
+    
+    .nap-race {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+    
+    .nap-reason {
+      font-size: 13px;
+      color: #333;
+    }
+    
+    .confidence-badge {
+      display: inline-block;
+      background: #28a745;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+    
+    .race-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      overflow: hidden;
+      page-break-inside: avoid;
+    }
+    
+    .race-header {
+      background: linear-gradient(135deg, #8B0000 0%, #A52A2A 100%);
+      color: white;
+      padding: 12px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .race-name {
+      font-weight: bold;
+      font-size: 14px;
+    }
+    
+    .race-info {
+      font-size: 11px;
+      color: #f0e6d3;
+    }
+    
+    .predictions-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .predictions-table th {
+      background: #f8f9fa;
+      padding: 8px 10px;
+      text-align: right;
+      font-size: 11px;
+      font-weight: 600;
+      color: #8B0000;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .predictions-table td {
+      padding: 8px 10px;
+      font-size: 11px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .predictions-table tr:nth-child(1) {
+      background: #fff8dc;
+    }
+    
+    .predictions-table tr:nth-child(2) {
+      background: #f5f5f5;
+    }
+    
+    .predictions-table tr:nth-child(3) {
+      background: #fff5eb;
+    }
+    
+    .position-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 12px;
+    }
+    
+    .position-1 {
+      background: #D4AF37;
+      color: white;
+    }
+    
+    .position-2 {
+      background: #C0C0C0;
+      color: white;
+    }
+    
+    .position-3 {
+      background: #CD7F32;
+      color: white;
+    }
+    
+    .power-score {
+      font-weight: bold;
+      color: #8B0000;
+    }
+    
+    .win-prob {
+      color: #28a745;
+      font-weight: 600;
+    }
+    
+    .value-badge {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 9px;
+      font-weight: bold;
+    }
+    
+    .value-excellent {
+      background: #28a745;
+      color: white;
+    }
+    
+    .value-good {
+      background: #17a2b8;
+      color: white;
+    }
+    
+    .value-fair {
+      background: #ffc107;
+      color: #333;
+    }
+    
+    .race-analysis {
+      padding: 10px 15px;
+      background: #f8f9fa;
+      font-size: 11px;
+      color: #555;
+      border-top: 1px solid #e0e0e0;
+    }
+    
+    .picks-section {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .pick-card {
+      flex: 1;
+      background: #f8f9fa;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+    }
+    
+    .pick-card h4 {
+      font-size: 12px;
+      color: #8B0000;
+      margin-bottom: 8px;
+    }
+    
+    .pick-card .horse-name {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 5px;
+    }
+    
+    .pick-card .horse-race {
+      font-size: 10px;
+      color: #666;
+    }
+    
+    .footer {
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px solid #e0e0e0;
+      text-align: center;
+    }
+    
+    .warning {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      border-radius: 4px;
+      padding: 10px;
+      font-size: 10px;
+      color: #856404;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    
+    .sources {
+      font-size: 9px;
+      color: #999;
+      margin-top: 10px;
+    }
+    
+    .copyright {
+      font-size: 10px;
+      color: #666;
+      margin-top: 10px;
+    }
+    
+    .page-break {
+      page-break-after: always;
+    }
+    
+    @media print {
+      body {
+        background: white;
+      }
+      
+      .page {
+        box-shadow: none;
+        margin: 0;
+        width: 100%;
+      }
+      
+      .race-card {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">🏇</div>
+      <h1>Elghali AI</h1>
+      <div class="subtitle">ترشيحات سباقات الخيل الذكية</div>
+    </div>
+    
+    <!-- Meta Info -->
+    <div class="meta-info">
+      <div class="meta-item">
+        <div class="meta-value">Meydan</div>
+        <div class="meta-label">المضمار</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-value">2026-02-22</div>
+        <div class="meta-label">التاريخ</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-value">6</div>
+        <div class="meta-label">السباقات</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-value">UAE</div>
+        <div class="meta-label">الدولة</div>
+      </div>
+    </div>
+    
+    <!-- NAP Section -->
+    <div class="nap-section">
+      <div class="nap-title">🌟 ترشيح اليوم - NAP of the Day</div>
+      <div class="nap-horse">Tadhg O'Shea Mount</div>
+      <div class="nap-race">Meydan Race 3 - Conditions Stakes</div>
+      <span class="confidence-badge">47% ثقة</span>
+      <div class="nap-reason">Power Score: 73.5 | Win Probability: 23.4% | الفارس: Tadhg O'Shea</div>
+    </div>
+    
+    <!-- Picks Section -->
+    <div class="picks-section">
+      <div class="pick-card">
+        <h4>🥈 الترشيح الثاني</h4>
+        <div class="horse-name">Tadhg O'Shea Mount</div>
+        <div class="horse-race">Meydan Race 5 - Group Race</div>
+      </div>
+      <div class="pick-card">
+        <h4>💰 ترشيح القيمة</h4>
+        <div class="horse-name">Tadhg O'Shea Mount</div>
+        <div class="horse-race">Meydan Race 2 - Rated Stakes</div>
+      </div>
+    </div>
+    
+    <!-- Warning -->
+    <div class="warning">
+      ⚠️ تنبيه: هذه الترشيحات مبنية على تحليل الذكاء الاصطناعي. المراهنة تنطوي على مخاطر - الرجاء المراهنة بمسؤولية.
+    </div>
+    
+    <!-- Race Cards -->
+    
+      <div class="race-card">
+        <div class="race-header">
+          <div class="race-name">
+            السباق 1 - Meydan Race 1 - Handicap
+          </div>
+          <div class="race-info">
+            16:30 | 1400m | Dirt | Fast
+          </div>
+        </div>
+        <table class="predictions-table">
+          <thead>
+            <tr>
+              <th>المركز</th>
+              <th>الحصان</th>
+              <th>البوابة</th>
+              <th>الفارس</th>
+              <th>المدرب</th>
+              <th>التقييم</th>
+              <th>Power Score</th>
+              <th>الاحتمال</th>
+              <th>القيمة</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-1">1</span>
+                </td>
+                <td><strong>Tadhg O'Shea Mount</strong></td>
+                <td>1</td>
+                <td>Tadhg O'Shea</td>
+                <td>Doug Watson</td>
+                <td>88</td>
+                <td class="power-score">70.3</td>
+                <td class="win-prob">21.4%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-2">2</span>
+                </td>
+                <td><strong>O'ertel Champion</strong></td>
+                <td>5</td>
+                <td>Antonio Fresu</td>
+                <td>Ernst Oertel</td>
+                <td>83</td>
+                <td class="power-score">69.4</td>
+                <td class="win-prob">21.1%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-3">3</span>
+                </td>
+                <td><strong>Doyle's Choice</strong></td>
+                <td>2</td>
+                <td>James Doyle</td>
+                <td>Musabbeh Al Mheiri</td>
+                <td>86</td>
+                <td class="power-score">66.2</td>
+                <td class="win-prob">20.2%</td>
+                <td>
+                  <span class="value-badge value-good">Good</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-4">4</span>
+                </td>
+                <td><strong>Mullen's Pick</strong></td>
+                <td>6</td>
+                <td>Richard Mullen</td>
+                <td>Satish Seemar</td>
+                <td>82</td>
+                <td class="power-score">65.4</td>
+                <td class="win-prob">19.9%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-5">5</span>
+                </td>
+                <td><strong>De Sousa Star</strong></td>
+                <td>4</td>
+                <td>Silvestre De Sousa</td>
+                <td>Bhupat Seemar</td>
+                <td>84</td>
+                <td class="power-score">62.9</td>
+                <td class="win-prob">19.1%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+          </tbody>
+        </table>
+        
+          <div class="race-analysis">
+            <strong>تحليل السباق:</strong> سباق 1 - Meydan Race 1 - Handicap
+المسافة: 1400م | السطح: تراب | عدد المتسابقين: 8
+الترشيح الرئيسي: Tadhg O'Shea Mount (Power Score: 70.3)
+الفارس: Tadhg O'Shea | المدرب: Doug Watson
+          </div>
+        
+      </div>
+      
+    
+      <div class="race-card">
+        <div class="race-header">
+          <div class="race-name">
+            السباق 2 - Meydan Race 2 - Rated Stakes
+          </div>
+          <div class="race-info">
+            16:30 | 2400m | Dirt | Fast
+          </div>
+        </div>
+        <table class="predictions-table">
+          <thead>
+            <tr>
+              <th>المركز</th>
+              <th>الحصان</th>
+              <th>البوابة</th>
+              <th>الفارس</th>
+              <th>المدرب</th>
+              <th>التقييم</th>
+              <th>Power Score</th>
+              <th>الاحتمال</th>
+              <th>القيمة</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-1">1</span>
+                </td>
+                <td><strong>Tadhg O'Shea Mount</strong></td>
+                <td>1</td>
+                <td>Tadhg O'Shea</td>
+                <td>Doug Watson</td>
+                <td>88</td>
+                <td class="power-score">69.3</td>
+                <td class="win-prob">23.1%</td>
+                <td>
+                  <span class="value-badge value-good">Good</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-2">2</span>
+                </td>
+                <td><strong>Doyle's Choice</strong></td>
+                <td>2</td>
+                <td>James Doyle</td>
+                <td>Musabbeh Al Mheiri</td>
+                <td>86</td>
+                <td class="power-score">68.2</td>
+                <td class="win-prob">22.7%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-3">3</span>
+                </td>
+                <td><strong>De Sousa Star</strong></td>
+                <td>4</td>
+                <td>Silvestre De Sousa</td>
+                <td>Bhupat Seemar</td>
+                <td>84</td>
+                <td class="power-score">67.6</td>
+                <td class="win-prob">22.5%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-4">4</span>
+                </td>
+                <td><strong>Mullen's Pick</strong></td>
+                <td>6</td>
+                <td>Richard Mullen</td>
+                <td>Satish Seemar</td>
+                <td>82</td>
+                <td class="power-score">67.6</td>
+                <td class="win-prob">22.5%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-5">5</span>
+                </td>
+                <td><strong>O'ertel Champion</strong></td>
+                <td>5</td>
+                <td>Antonio Fresu</td>
+                <td>Ernst Oertel</td>
+                <td>83</td>
+                <td class="power-score">65.8</td>
+                <td class="win-prob">21.9%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+          </tbody>
+        </table>
+        
+          <div class="race-analysis">
+            <strong>تحليل السباق:</strong> سباق 2 - Meydan Race 2 - Rated Stakes
+المسافة: 2400م | السطح: تراب | عدد المتسابقين: 6
+الترشيح الرئيسي: Tadhg O'Shea Mount (Power Score: 69.3)
+الفارس: Tadhg O'Shea | المدرب: Doug Watson
+          </div>
+        
+      </div>
+      
+    
+      <div class="race-card">
+        <div class="race-header">
+          <div class="race-name">
+            السباق 3 - Meydan Race 3 - Conditions Stakes
+          </div>
+          <div class="race-info">
+            17:30 | 1800m | Dirt | Fast
+          </div>
+        </div>
+        <table class="predictions-table">
+          <thead>
+            <tr>
+              <th>المركز</th>
+              <th>الحصان</th>
+              <th>البوابة</th>
+              <th>الفارس</th>
+              <th>المدرب</th>
+              <th>التقييم</th>
+              <th>Power Score</th>
+              <th>الاحتمال</th>
+              <th>القيمة</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-1">1</span>
+                </td>
+                <td><strong>Tadhg O'Shea Mount</strong></td>
+                <td>1</td>
+                <td>Tadhg O'Shea</td>
+                <td>Doug Watson</td>
+                <td>88</td>
+                <td class="power-score">73.5</td>
+                <td class="win-prob">23.4%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-2">2</span>
+                </td>
+                <td><strong>Doyle's Choice</strong></td>
+                <td>2</td>
+                <td>James Doyle</td>
+                <td>Musabbeh Al Mheiri</td>
+                <td>86</td>
+                <td class="power-score">67.4</td>
+                <td class="win-prob">21.4%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-3">3</span>
+                </td>
+                <td><strong>De Sousa Star</strong></td>
+                <td>4</td>
+                <td>Silvestre De Sousa</td>
+                <td>Bhupat Seemar</td>
+                <td>84</td>
+                <td class="power-score">66.1</td>
+                <td class="win-prob">21.0%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-4">4</span>
+                </td>
+                <td><strong>Buick's Best</strong></td>
+                <td>3</td>
+                <td>William Buick</td>
+                <td>Charlie Appleby</td>
+                <td>85</td>
+                <td class="power-score">65.8</td>
+                <td class="win-prob">20.9%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-5">5</span>
+                </td>
+                <td><strong>Pinheiro Runner</strong></td>
+                <td>7</td>
+                <td>Bernardo Pinheiro</td>
+                <td>Khalid Al Neyadi</td>
+                <td>81</td>
+                <td class="power-score">65.2</td>
+                <td class="win-prob">20.7%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+          </tbody>
+        </table>
+        
+          <div class="race-analysis">
+            <strong>تحليل السباق:</strong> سباق 3 - Meydan Race 3 - Conditions Stakes
+المسافة: 1800م | السطح: تراب | عدد المتسابقين: 7
+الترشيح الرئيسي: Tadhg O'Shea Mount (Power Score: 73.5)
+الفارس: Tadhg O'Shea | المدرب: Doug Watson
+          </div>
+        
+      </div>
+      
+    
+      <div class="race-card">
+        <div class="race-header">
+          <div class="race-name">
+            السباق 4 - Meydan Race 4 - Listed Stakes
+          </div>
+          <div class="race-info">
+            17:30 | 1400m | Dirt | Fast
+          </div>
+        </div>
+        <table class="predictions-table">
+          <thead>
+            <tr>
+              <th>المركز</th>
+              <th>الحصان</th>
+              <th>البوابة</th>
+              <th>الفارس</th>
+              <th>المدرب</th>
+              <th>التقييم</th>
+              <th>Power Score</th>
+              <th>الاحتمال</th>
+              <th>القيمة</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-1">1</span>
+                </td>
+                <td><strong>Buick's Best</strong></td>
+                <td>3</td>
+                <td>William Buick</td>
+                <td>Charlie Appleby</td>
+                <td>85</td>
+                <td class="power-score">66.9</td>
+                <td class="win-prob">21.3%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-2">2</span>
+                </td>
+                <td><strong>Tadhg O'Shea Mount</strong></td>
+                <td>1</td>
+                <td>Tadhg O'Shea</td>
+                <td>Doug Watson</td>
+                <td>88</td>
+                <td class="power-score">66.7</td>
+                <td class="win-prob">21.2%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-3">3</span>
+                </td>
+                <td><strong>De Sousa Star</strong></td>
+                <td>4</td>
+                <td>Silvestre De Sousa</td>
+                <td>Bhupat Seemar</td>
+                <td>84</td>
+                <td class="power-score">66.2</td>
+                <td class="win-prob">21.1%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-4">4</span>
+                </td>
+                <td><strong>Doyle's Choice</strong></td>
+                <td>2</td>
+                <td>James Doyle</td>
+                <td>Musabbeh Al Mheiri</td>
+                <td>86</td>
+                <td class="power-score">65.6</td>
+                <td class="win-prob">20.9%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-5">5</span>
+                </td>
+                <td><strong>O'ertel Champion</strong></td>
+                <td>5</td>
+                <td>Antonio Fresu</td>
+                <td>Ernst Oertel</td>
+                <td>83</td>
+                <td class="power-score">64.9</td>
+                <td class="win-prob">20.6%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+          </tbody>
+        </table>
+        
+          <div class="race-analysis">
+            <strong>تحليل السباق:</strong> سباق 4 - Meydan Race 4 - Listed Stakes
+المسافة: 1400م | السطح: تراب | عدد المتسابقين: 7
+الترشيح الرئيسي: Buick's Best (Power Score: 66.9)
+الفارس: William Buick | المدرب: Charlie Appleby
+          </div>
+        
+      </div>
+      
+    
+      <div class="race-card">
+        <div class="race-header">
+          <div class="race-name">
+            السباق 5 - Meydan Race 5 - Group Race
+          </div>
+          <div class="race-info">
+            17:30 | 2000m | Dirt | Fast
+          </div>
+        </div>
+        <table class="predictions-table">
+          <thead>
+            <tr>
+              <th>المركز</th>
+              <th>الحصان</th>
+              <th>البوابة</th>
+              <th>الفارس</th>
+              <th>المدرب</th>
+              <th>التقييم</th>
+              <th>Power Score</th>
+              <th>الاحتمال</th>
+              <th>القيمة</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-1">1</span>
+                </td>
+                <td><strong>Tadhg O'Shea Mount</strong></td>
+                <td>1</td>
+                <td>Tadhg O'Shea</td>
+                <td>Doug Watson</td>
+                <td>88</td>
+                <td class="power-score">72.8</td>
+                <td class="win-prob">22.2%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-2">2</span>
+                </td>
+                <td><strong>Doyle's Choice</strong></td>
+                <td>2</td>
+                <td>James Doyle</td>
+                <td>Musabbeh Al Mheiri</td>
+                <td>86</td>
+                <td class="power-score">68.6</td>
+                <td class="win-prob">20.9%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-3">3</span>
+                </td>
+                <td><strong>Buick's Best</strong></td>
+                <td>3</td>
+                <td>William Buick</td>
+                <td>Charlie Appleby</td>
+                <td>85</td>
+                <td class="power-score">67.6</td>
+                <td class="win-prob">20.6%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-4">4</span>
+                </td>
+                <td><strong>De Sousa Star</strong></td>
+                <td>4</td>
+                <td>Silvestre De Sousa</td>
+                <td>Bhupat Seemar</td>
+                <td>84</td>
+                <td class="power-score">67.5</td>
+                <td class="win-prob">20.6%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-5">5</span>
+                </td>
+                <td><strong>Dawson Hope</strong></td>
+                <td>8</td>
+                <td>Ray Dawson</td>
+                <td>Helal Alalawi</td>
+                <td>80</td>
+                <td class="power-score">67.5</td>
+                <td class="win-prob">20.5%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+          </tbody>
+        </table>
+        
+          <div class="race-analysis">
+            <strong>تحليل السباق:</strong> سباق 5 - Meydan Race 5 - Group Race
+المسافة: 2000م | السطح: تراب | عدد المتسابقين: 8
+الترشيح الرئيسي: Tadhg O'Shea Mount (Power Score: 72.8)
+الفارس: Tadhg O'Shea | المدرب: Doug Watson
+          </div>
+        
+      </div>
+      <div class="page-break"></div>
+    
+      <div class="race-card">
+        <div class="race-header">
+          <div class="race-name">
+            السباق 6 - Meydan Race 6 - Maiden Stakes
+          </div>
+          <div class="race-info">
+            18:00 | 1800m | Dirt | Fast
+          </div>
+        </div>
+        <table class="predictions-table">
+          <thead>
+            <tr>
+              <th>المركز</th>
+              <th>الحصان</th>
+              <th>البوابة</th>
+              <th>الفارس</th>
+              <th>المدرب</th>
+              <th>التقييم</th>
+              <th>Power Score</th>
+              <th>الاحتمال</th>
+              <th>القيمة</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-1">1</span>
+                </td>
+                <td><strong>Doyle's Choice</strong></td>
+                <td>2</td>
+                <td>James Doyle</td>
+                <td>Musabbeh Al Mheiri</td>
+                <td>86</td>
+                <td class="power-score">69.8</td>
+                <td class="win-prob">23.3%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-2">2</span>
+                </td>
+                <td><strong>O'ertel Champion</strong></td>
+                <td>5</td>
+                <td>Antonio Fresu</td>
+                <td>Ernst Oertel</td>
+                <td>83</td>
+                <td class="power-score">69.1</td>
+                <td class="win-prob">23.0%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-3">3</span>
+                </td>
+                <td><strong>De Sousa Star</strong></td>
+                <td>4</td>
+                <td>Silvestre De Sousa</td>
+                <td>Bhupat Seemar</td>
+                <td>84</td>
+                <td class="power-score">68.9</td>
+                <td class="win-prob">23.0%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-4">4</span>
+                </td>
+                <td><strong>Tadhg O'Shea Mount</strong></td>
+                <td>1</td>
+                <td>Tadhg O'Shea</td>
+                <td>Doug Watson</td>
+                <td>88</td>
+                <td class="power-score">68.3</td>
+                <td class="win-prob">22.8%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <span class="position-badge position-5">5</span>
+                </td>
+                <td><strong>Buick's Best</strong></td>
+                <td>3</td>
+                <td>William Buick</td>
+                <td>Charlie Appleby</td>
+                <td>85</td>
+                <td class="power-score">66.1</td>
+                <td class="win-prob">22.0%</td>
+                <td>
+                  <span class="value-badge value-fair">Fair</span>
+                </td>
+              </tr>
+            
+          </tbody>
+        </table>
+        
+          <div class="race-analysis">
+            <strong>تحليل السباق:</strong> سباق 6 - Meydan Race 6 - Maiden Stakes
+المسافة: 1800م | السطح: تراب | عدد المتسابقين: 6
+الترشيح الرئيسي: Doyle's Choice (Power Score: 69.8)
+الفارس: James Doyle | المدرب: Musabbeh Al Mheiri
+          </div>
+        
+      </div>
+      
+    
+    
+    <!-- Footer -->
+    <div class="footer">
+      <div class="sources">
+        المصادر: Sample Data (Real data unavailable)
+      </div>
+      <div class="copyright">
+        © 2026 Elghali AI - جميع الحقوق محفوظة
+      </div>
+      <div style="font-size: 9px; color: #999; margin-top: 5px;">
+        تم إنشاء التقرير: 2026-02-22T03:22:01.307Z
+      </div>
+    </div>
+  </div>
+</body>
+</html>

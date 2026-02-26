@@ -1,0 +1,47 @@
+
+🚀 Elghali AI Proxy API running on port 3001
+📡 Use this URL for Vercel: http://localhost:3001
+
+Endpoints:
+  GET  /health       - Health check
+  GET  /racecourses  - List all racecourses
+  POST /predictions  - Get predictions
+[Proxy API] Request: date=2026-02-22, racecourse=Al Ain
+[Fetcher v7.0] Fetching: Al Ain on 2026-02-22
+[Fetcher] Found 40 snippets from 8 sources
+[Fetcher] SUCCESS: 3 races, 12 horses
+[Predictions] Analyzing 3 races
+[Proxy API] Completed in 124966ms
+[Proxy API] Request: date=2026-02-21, racecourse=Jebel Ali
+[Fetcher v7.0] Fetching: Jebel Ali on 2026-02-21
+[Fetcher] Found 40 snippets from 8 sources
+Failed to make API request: 92 |                 headers: headers,
+93 |                 body: JSON.stringify(requestBody),
+94 |             });
+95 |             if (!response.ok) {
+96 |                 const errorBody = await response.text();
+97 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                               ^
+error: API request failed with status 400: {"contentFilter":[{"level":1,"role":"user"}],"error":{"code":"1301","message":"系统检测到输入或生成内容可能包含不安全或敏感内容，请您避免输入易产生敏感内容的提示语，感谢您的配合。"}}
+      at createChatCompletion (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:97:27)
+      at async fetchRealRaceData (/home/z/my-project/src/lib/real-race-fetcher.ts:97:51)
+      at async <anonymous> (/home/z/my-project/proxy-server.ts:55:27)
+
+[Fetcher] Error: 92 |                 headers: headers,
+93 |                 body: JSON.stringify(requestBody),
+94 |             });
+95 |             if (!response.ok) {
+96 |                 const errorBody = await response.text();
+97 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                               ^
+error: API request failed with status 400: {"contentFilter":[{"level":1,"role":"user"}],"error":{"code":"1301","message":"系统检测到输入或生成内容可能包含不安全或敏感内容，请您避免输入易产生敏感内容的提示语，感谢您的配合。"}}
+      at createChatCompletion (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:97:27)
+      at async fetchRealRaceData (/home/z/my-project/src/lib/real-race-fetcher.ts:97:51)
+      at async <anonymous> (/home/z/my-project/proxy-server.ts:55:27)
+
+[Proxy API] Request: date=2026-02-22, racecourse=Al Ain
+[Fetcher v7.0] Fetching: Al Ain on 2026-02-22
+[Fetcher] Found 40 snippets from 8 sources
+[Fetcher] SUCCESS: 4 races, 10 horses
+[Predictions] Analyzing 4 races
+[Proxy API] Completed in 103887ms

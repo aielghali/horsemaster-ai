@@ -1,0 +1,78 @@
+{
+  "date": "2026-02-20",
+  "venue": "Meydan",
+  "races": [
+    {
+      "raceNumber": 1,
+      "time": "17:30",
+      "name": "DEEPAL S05 - MAIDEN",
+      "surface": "Turf",
+      "distance": "1400m",
+      "prize": "AED 165,000",
+      "entries": []
+    },
+    {
+      "raceNumber": 2,
+      "time": "18:05",
+      "name": "DEEPAL S07 - HANDICAP (80-100)",
+      "surface": "Dirt",
+      "distance": "1400m",
+      "prize": "AED 250,000",
+      "entries": []
+    },
+    {
+      "raceNumber": 3,
+      "time": "18:40",
+      "name": "UAE OAKS",
+      "surface": "Dirt",
+      "distance": "1900m",
+      "prize": "AED 800,000",
+      "entries": []
+    },
+    {
+      "raceNumber": 4,
+      "time": "19:15",
+      "name": "Touch The Future",
+      "surface": "Turf",
+      "distance": "1800m",
+      "prize": "AED 300,000",
+      "entries": []
+    },
+    {
+      "raceNumber": 5,
+      "time": "19:50",
+      "name": "DEEPAL Super Hybrid",
+      "surface": "Dirt",
+      "distance": "2000m",
+      "prize": "AED 300,000",
+      "entries": []
+    },
+    {
+      "raceNumber": 6,
+      "time": "20:25",
+      "name": "BALANCHINE (Group 2)",
+      "surface": "Turf",
+      "distance": "1800m",
+      "prize": "AED 850,000",
+      "entries": []
+    },
+    {
+      "raceNumber": 7,
+      "time": "21:00",
+      "name": "DUBAI ROAD TO KENTUCKY DERBY",
+      "surface": "Dirt",
+      "distance": "1900m",
+      "prize": "AED 800,000",
+      "entries": []
+    },
+    {
+      "raceNumber": 8,
+      "time": "21:45",
+      "name": "NAD AL SHEBA TROPHY (Group 3)",
+      "surface": "Turf",
+      "distance": "2800m",
+      "prize": "AED 700,000",
+      "entries": []
+    }
+  ]
+}

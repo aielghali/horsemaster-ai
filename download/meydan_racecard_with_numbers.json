@@ -1,0 +1,364 @@
+{
+  "date": "2026-02-20",
+  "venue": "Meydan",
+  "races": {
+    "1": [
+      {
+        "draw": "4",
+        "horse": "CHARMING LIFE (IRE)"
+      },
+      {
+        "draw": "9",
+        "horse": "HIDDEN SECRET (IRE)"
+      },
+      {
+        "draw": "7",
+        "horse": "MR PRECOCIOUS (USA)"
+      },
+      {
+        "draw": "3",
+        "horse": "VOLCANIC ROCK (IRE)"
+      },
+      {
+        "draw": "0",
+        "horse": "CATSTYLE (USA)"
+      },
+      {
+        "draw": "0",
+        "horse": "DIAMONDAIRES WILL (USA)"
+      },
+      {
+        "draw": "2",
+        "horse": "KEY OF MAGIC (USA)"
+      },
+      {
+        "draw": "2",
+        "horse": "MAGIC ART (USA)"
+      },
+      {
+        "draw": "5",
+        "horse": "RAASIL (USA)"
+      }
+    ],
+    "2": [
+      {
+        "draw": "1",
+        "horse": "SUCETTE (USA)"
+      },
+      {
+        "draw": "0",
+        "horse": "WILLOCH (USA)"
+      },
+      {
+        "draw": "2",
+        "horse": "CAT BELLING (USA)"
+      },
+      {
+        "draw": "21",
+        "horse": "LOGO HUNTER (IRE)"
+      },
+      {
+        "draw": "15",
+        "horse": "POWER MODE (USA)"
+      },
+      {
+        "draw": "31",
+        "horse": "RUN BOY RUN (GB)"
+      },
+      {
+        "draw": "35",
+        "horse": "DESPERATE HERO (GB)"
+      },
+      {
+        "draw": "8",
+        "horse": "THE MAN (IRE)"
+      },
+      {
+        "draw": "3",
+        "horse": "SUBITO (USA)"
+      },
+      {
+        "draw": "13",
+        "horse": "FIGHT ZONE (USA)"
+      },
+      {
+        "draw": "7",
+        "horse": "OLYMPUS POINT (IRE)"
+      },
+      {
+        "draw": "8",
+        "horse": "MISS YECHANCE (IRE)"
+      },
+      {
+        "draw": "9",
+        "horse": "DONDE FIRMO (URU)"
+      },
+      {
+        "draw": "17",
+        "horse": "DYONISOS (FR)"
+      },
+      {
+        "draw": "29",
+        "horse": "MAJOR CINNAMON (USA)"
+      },
+      {
+        "draw": "31",
+        "horse": "TWILIGHT CALLS (GB)"
+      },
+      {
+        "draw": "16",
+        "horse": "MADE IN MEXICO (AUS)"
+      },
+      {
+        "draw": "3",
+        "horse": "LABWAH (USA)"
+      },
+      {
+        "draw": "3",
+        "horse": "TJAREED (USA)"
+      },
+      {
+        "draw": "4",
+        "horse": "DOZALLA (USA)"
+      },
+      {
+        "draw": "3",
+        "horse": "YUNO (USA)"
+      },
+      {
+        "draw": "5",
+        "horse": "PRETTY AND FAMOUS (USA)"
+      },
+      {
+        "draw": "2",
+        "horse": "AUNTIE FAIR (USA)"
+      }
+    ],
+    "3": [
+      {
+        "draw": "1",
+        "horse": "DIALED TO DUBAI (USA)"
+      },
+      {
+        "draw": "9",
+        "horse": "CHIBITTY (FR)"
+      },
+      {
+        "draw": "14",
+        "horse": "DIVIDEND (GB)"
+      },
+      {
+        "draw": "11",
+        "horse": "ACAPULCO BAY (IRE)"
+      },
+      {
+        "draw": "11",
+        "horse": "AL AALI (FR)"
+      },
+      {
+        "draw": "32",
+        "horse": "CLAYMORE (FR)"
+      },
+      {
+        "draw": "8",
+        "horse": "RAJEKO (IRE)"
+      },
+      {
+        "draw": "24",
+        "horse": "LANEQASH (GB)"
+      },
+      {
+        "draw": "14",
+        "horse": "DANTE'S LAD (IRE)"
+      },
+      {
+        "draw": "18",
+        "horse": "ELRAAED (GB)"
+      },
+      {
+        "draw": "5",
+        "horse": "MASAI MOON (GB)"
+      },
+      {
+        "draw": "47",
+        "horse": "SEAN (GER)"
+      },
+      {
+        "draw": "14",
+        "horse": "GREEN TRIANGLE (IRE)"
+      },
+      {
+        "draw": "9",
+        "horse": "WAR SOCKS (GB)"
+      },
+      {
+        "draw": "12",
+        "horse": "WILL SCARLET (GB)"
+      },
+      {
+        "draw": "20",
+        "horse": "SHOOTOUT (IRE)"
+      },
+      {
+        "draw": "26",
+        "horse": "SHAQ DIESEL (USA)"
+      },
+      {
+        "draw": "25",
+        "horse": "KHANJAR (IRE)"
+      },
+      {
+        "draw": "17",
+        "horse": "STROBE (USA)"
+      },
+      {
+        "draw": "10",
+        "horse": "REBEL'S GAMBLE (IRE)"
+      },
+      {
+        "draw": "9",
+        "horse": "ZANDVOORT (USA)"
+      },
+      {
+        "draw": "13",
+        "horse": "LAHFATY (USA)"
+      },
+      {
+        "draw": "15",
+        "horse": "ARMY ETHOS (GB)"
+      },
+      {
+        "draw": "18",
+        "horse": "DOLAYLI (FR)"
+      },
+      {
+        "draw": "20",
+        "horse": "GO CHROME GO (ARG)"
+      },
+      {
+        "draw": "8",
+        "horse": "AFRICAN CANDY (USA)"
+      },
+      {
+        "draw": "11",
+        "horse": "DUBAI BEACH (IRE)"
+      },
+      {
+        "draw": "10",
+        "horse": "DUBAI TREASURE (IRE)"
+      },
+      {
+        "draw": "9",
+        "horse": "FAIRY GLEN (FR)"
+      },
+      {
+        "draw": "15",
+        "horse": "CAPITANA BLING (IRE)"
+      },
+      {
+        "draw": "15",
+        "horse": "RIYABOVKA (FR)"
+      }
+    ],
+    "4": [
+      {
+        "draw": "1",
+        "horse": "BLUE NAZARE (IRE)"
+      },
+      {
+        "draw": "14",
+        "horse": "MISS OF CHANGE (FR)"
+      }
+    ],
+    "5": [
+      {
+        "draw": "1",
+        "horse": "SALLOOM (USA)"
+      },
+      {
+        "draw": "3",
+        "horse": "LINO PADRINO (USA)"
+      },
+      {
+        "draw": "5",
+        "horse": "BROTHERLY LOVE (GB)"
+      },
+      {
+        "draw": "2",
+        "horse": "RAAJEHH (USA)"
+      },
+      {
+        "draw": "3",
+        "horse": "AL KHAWANEEJ (USA)"
+      },
+      {
+        "draw": "4",
+        "horse": "OMAHA FRONT (USA)"
+      },
+      {
+        "draw": "4",
+        "horse": "WATCH COLLECTOR (USA)"
+      },
+      {
+        "draw": "3",
+        "horse": "DUKE OF IMMATIN (USA)"
+      },
+      {
+        "draw": "3",
+        "horse": "KNIGHT OF GLORY (USA)"
+      },
+      {
+        "draw": "5",
+        "horse": "RAMMAAS (USA)"
+      },
+      {
+        "draw": "4",
+        "horse": "SENATOR OF STATE (IRE)"
+      },
+      {
+        "draw": "4",
+        "horse": "AWESOME FLEET (IRE)"
+      },
+      {
+        "draw": "2",
+        "horse": "SARY SHAYAN (USA)"
+      },
+      {
+        "draw": "3",
+        "horse": "FIRE D'ORO (USA)"
+      },
+      {
+        "draw": "20",
+        "horse": "SUNWAY (FR)"
+      },
+      {
+        "draw": "27",
+        "horse": "AL NAYYIR (GB)"
+      },
+      {
+        "draw": "5",
+        "horse": "BY THE BOOK (IRE)"
+      },
+      {
+        "draw": "23",
+        "horse": "CRYSTAL BLACK (IRE)"
+      },
+      {
+        "draw": "50",
+        "horse": "KIHAVAH (GB)"
+      },
+      {
+        "draw": "10",
+        "horse": "AERONAUTIC (IRE)"
+      },
+      {
+        "draw": "12",
+        "horse": "NIGHTWALKER (GB)"
+      },
+      {
+        "draw": "10",
+        "horse": "SURABAD (GB)"
+      }
+    ]
+  }
+}

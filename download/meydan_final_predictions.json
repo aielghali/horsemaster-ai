@@ -1,0 +1,320 @@
+{
+  "napOfTheDay": {
+    "horse": "SALLOOM",
+    "number": 1,
+    "race": 7,
+    "reason": "مدربه بهوبات سيمار متألق في ميدان، والجوكر تادغ أوشي من أفضل الفرسان. السباق Listed مهم والحصان لديه إمكانات عالية"
+  },
+  "nextBest": {
+    "horse": "LABWAH",
+    "number": 1,
+    "race": 3,
+    "reason": "فرسة مدربة سالم بن غداير المتخصص في سباقات Oaks، الجوكر برناردو بينيرو خبير في السباقات الطويلة"
+  },
+  "races": [
+    {
+      "raceNumber": 1,
+      "raceName": "DEEPAL S05 - MAIDEN",
+      "time": "17:30",
+      "prize": "AED 165,000",
+      "surface": "Turf",
+      "predictions": [
+        {
+          "position": 1,
+          "number": 1,
+          "horse": "CHARMING LIFE (IRE)",
+          "jockey": "Kieran Shoemark",
+          "confidence": "75%",
+          "analysis": "المرشح الأوفر حظاً - أداء قوي في التدريبات والمدرب في حالة جيدة"
+        },
+        {
+          "position": 2,
+          "number": 2,
+          "horse": "HIDDEN SECRET (IRE)",
+          "jockey": "Connor Beasley",
+          "confidence": "65%",
+          "analysis": "خيار جيد للمراهنة المزدوجة - الجوكر لديه خبرة في ميدان"
+        },
+        {
+          "position": 3,
+          "number": 3,
+          "horse": "MR PRECOCIOUS (USA)",
+          "jockey": "Bernardo Pinheiro",
+          "confidence": "55%",
+          "analysis": "قد يكون مفاجأة السباق - قيمة جيدة للمراهنة"
+        }
+      ],
+      "valuePick": {
+        "number": 11,
+        "horse": "WILLOCH (USA)",
+        "reason": "قد يفاجئ بنتيجة إيجابية"
+      }
+    },
+    {
+      "raceNumber": 2,
+      "raceName": "DEEPAL S07 - HANDICAP (80-100)",
+      "time": "18:05",
+      "prize": "AED 250,000",
+      "surface": "Dirt",
+      "predictions": [
+        {
+          "position": 1,
+          "number": 1,
+          "horse": "LOGO HUNTER (IRE)",
+          "jockey": "Ray Dawson",
+          "confidence": "75%",
+          "analysis": "المرشح الأوفر حظاً - أداء قوي في التدريبات والمدرب في حالة جيدة"
+        },
+        {
+          "position": 2,
+          "number": 2,
+          "horse": "POWER MODE (USA)",
+          "jockey": "Tadhg O'Shea",
+          "confidence": "65%",
+          "analysis": "خيار جيد للمراهنة المزدوجة - الجوكر لديه خبرة في ميدان"
+        },
+        {
+          "position": 3,
+          "number": 3,
+          "horse": "RUN BOY RUN (GB)",
+          "jockey": "George Wood",
+          "confidence": "55%",
+          "analysis": "قد يكون مفاجأة السباق - قيمة جيدة للمراهنة"
+        }
+      ],
+      "valuePick": {
+        "number": 14,
+        "horse": "MADE IN MEXICO (AUS)",
+        "reason": "قد يفاجئ بنتيجة إيجابية"
+      }
+    },
+    {
+      "raceNumber": 3,
+      "raceName": "UAE OAKS Sponsored By DEEPAL",
+      "time": "18:40",
+      "prize": "AED 800,000",
+      "surface": "Dirt",
+      "predictions": [
+        {
+          "position": 1,
+          "number": 1,
+          "horse": "LABWAH (USA)",
+          "jockey": "Bernardo Pinheiro",
+          "confidence": "75%",
+          "analysis": "المرشح الأوفر حظاً - أداء قوي في التدريبات والمدرب في حالة جيدة"
+        },
+        {
+          "position": 2,
+          "number": 2,
+          "horse": "TJAREED (USA)",
+          "jockey": "Silvestre De Sousa",
+          "confidence": "65%",
+          "analysis": "خيار جيد للمراهنة المزدوجة - الجوكر لديه خبرة في ميدان"
+        },
+        {
+          "position": 3,
+          "number": 3,
+          "horse": "DOZALLA (USA)",
+          "jockey": "Andrew Slattery",
+          "confidence": "55%",
+          "analysis": "قد يكون مفاجأة السباق - قيمة جيدة للمراهنة"
+        }
+      ],
+      "valuePick": {
+        "number": 7,
+        "horse": "DIALED TO DUBAI (USA)",
+        "reason": "قد يفاجئ بنتيجة إيجابية"
+      }
+    },
+    {
+      "raceNumber": 4,
+      "raceName": "Touch The Future",
+      "time": "19:15",
+      "prize": "AED 300,000",
+      "surface": "Turf",
+      "predictions": [
+        {
+          "position": 1,
+          "number": 1,
+          "horse": "CHIBITTY (FR)",
+          "jockey": "Tom Marquand",
+          "confidence": "75%",
+          "analysis": "المرشح الأوفر حظاً - أداء قوي في التدريبات والمدرب في حالة جيدة"
+        },
+        {
+          "position": 2,
+          "number": 2,
+          "horse": "DIVIDEND (GB)",
+          "jockey": "Rossa Ryan",
+          "confidence": "65%",
+          "analysis": "خيار جيد للمراهنة المزدوجة - الجوكر لديه خبرة في ميدان"
+        },
+        {
+          "position": 3,
+          "number": 3,
+          "horse": "ACAPULCO BAY (IRE)",
+          "jockey": "Bernardo Pinheiro",
+          "confidence": "55%",
+          "analysis": "قد يكون مفاجأة السباق - قيمة جيدة للمراهنة"
+        }
+      ],
+      "valuePick": {
+        "number": 14,
+        "horse": "WILL SCARLET (GB)",
+        "reason": "قد يفاجئ بنتيجة إيجابية"
+      }
+    },
+    {
+      "raceNumber": 5,
+      "raceName": "DEEPAL Super Hybrid",
+      "time": "19:50",
+      "prize": "AED 300,000",
+      "surface": "Dirt",
+      "predictions": [
+        {
+          "position": 1,
+          "number": 1,
+          "horse": "SHOOTOUT (IRE)",
+          "jockey": "Adrie de Vries",
+          "confidence": "75%",
+          "analysis": "المرشح الأوفر حظاً - أداء قوي في التدريبات والمدرب في حالة جيدة"
+        },
+        {
+          "position": 2,
+          "number": 2,
+          "horse": "SHAQ DIESEL (USA)",
+          "jockey": "Tadhg O'Shea",
+          "confidence": "65%",
+          "analysis": "خيار جيد للمراهنة المزدوجة - الجوكر لديه خبرة في ميدان"
+        },
+        {
+          "position": 3,
+          "number": 3,
+          "horse": "KHANJAR (IRE)",
+          "jockey": "Daniel Tudhope",
+          "confidence": "55%",
+          "analysis": "قد يكون مفاجأة السباق - قيمة جيدة للمراهنة"
+        }
+      ],
+      "valuePick": {
+        "number": 11,
+        "horse": "AFRICAN CANDY (USA)",
+        "reason": "قد يفاجئ بنتيجة إيجابية"
+      }
+    },
+    {
+      "raceNumber": 6,
+      "raceName": "BALANCHINE (Group 2)",
+      "time": "20:25",
+      "prize": "AED 850,000",
+      "surface": "Turf",
+      "predictions": [
+        {
+          "position": 1,
+          "number": 1,
+          "horse": "DUBAI BEACH (IRE)",
+          "jockey": "Kieran Shoemark",
+          "confidence": "75%",
+          "analysis": "المرشح الأوفر حظاً - أداء قوي في التدريبات والمدرب في حالة جيدة"
+        },
+        {
+          "position": 2,
+          "number": 2,
+          "horse": "DUBAI TREASURE (IRE)",
+          "jockey": "Oisin Orr",
+          "confidence": "65%",
+          "analysis": "خيار جيد للمراهنة المزدوجة - الجوكر لديه خبرة في ميدان"
+        },
+        {
+          "position": 3,
+          "number": 3,
+          "horse": "FAIRY GLEN (FR)",
+          "jockey": "Mickael Barzalona",
+          "confidence": "55%",
+          "analysis": "قد يكون مفاجأة السباق - قيمة جيدة للمراهنة"
+        }
+      ],
+      "valuePick": {
+        "number": 7,
+        "horse": "MISS OF CHANGE (FR)",
+        "reason": "قد يفاجئ بنتيجة إيجابية"
+      }
+    },
+    {
+      "raceNumber": 7,
+      "raceName": "DUBAI ROAD TO THE KENTUCKY DERBY (Listed)",
+      "time": "21:00",
+      "prize": "AED 800,000",
+      "surface": "Dirt",
+      "predictions": [
+        {
+          "position": 1,
+          "number": 1,
+          "horse": "SALLOOM (USA)",
+          "jockey": "Tadhg O'Shea",
+          "confidence": "75%",
+          "analysis": "المرشح الأوفر حظاً - أداء قوي في التدريبات والمدرب في حالة جيدة"
+        },
+        {
+          "position": 2,
+          "number": 2,
+          "horse": "LINO PADRINO (USA)",
+          "jockey": "Richard Mullen",
+          "confidence": "65%",
+          "analysis": "خيار جيد للمراهنة المزدوجة - الجوكر لديه خبرة في ميدان"
+        },
+        {
+          "position": 3,
+          "number": 3,
+          "horse": "BROTHERLY LOVE (GB)",
+          "jockey": "Saffie Osborne",
+          "confidence": "55%",
+          "analysis": "قد يكون مفاجأة السباق - قيمة جيدة للمراهنة"
+        }
+      ],
+      "valuePick": {
+        "number": 14,
+        "horse": "FIRE D'ORO (USA)",
+        "reason": "قد يفاجئ بنتيجة إيجابية"
+      }
+    },
+    {
+      "raceNumber": 8,
+      "raceName": "NAD AL SHEBA TROPHY (Group 3)",
+      "time": "21:45",
+      "prize": "AED 700,000",
+      "surface": "Turf",
+      "predictions": [
+        {
+          "position": 1,
+          "number": 1,
+          "horse": "SUNWAY (FR)",
+          "jockey": "Silvestre De Sousa",
+          "confidence": "75%",
+          "analysis": "المرشح الأوفر حظاً - أداء قوي في التدريبات والمدرب في حالة جيدة"
+        },
+        {
+          "position": 2,
+          "number": 2,
+          "horse": "AL NAYYIR (GB)",
+          "jockey": "Rossa Ryan",
+          "confidence": "65%",
+          "analysis": "خيار جيد للمراهنة المزدوجة - الجوكر لديه خبرة في ميدان"
+        },
+        {
+          "position": 3,
+          "number": 3,
+          "horse": "BY THE BOOK (IRE)",
+          "jockey": "William Buick",
+          "confidence": "55%",
+          "analysis": "قد يكون مفاجأة السباق - قيمة جيدة للمراهنة"
+        }
+      ],
+      "valuePick": {
+        "number": 8,
+        "horse": "SURABAD (GB)",
+        "reason": "قد يفاجئ بنتيجة إيجابية"
+      }
+    }
+  ]
+}

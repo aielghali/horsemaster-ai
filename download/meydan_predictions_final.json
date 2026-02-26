@@ -1,0 +1,96 @@
+{
+  "napOfTheDay": {
+    "horse": "LABWAH (USA)",
+    "race": 3,
+    "draw": 1,
+    "reason": "الفرس المرشحة الأولى في سباق UAE Oaks - مدربة سالم بن غداير المتخصص في سباقات الفرسات، والجوكر برناردو بينيرو خبير في السباقات الكلاسيكية. الانطلاق من المركز 1 يعطيها أفضلية واضحة."
+  },
+  "nextBest": {
+    "horse": "KEY OF MAGIC (USA)",
+    "race": 1,
+    "draw": 7,
+    "reason": "مدربة تشارلز أبلبي، عملاق سباقات الإمارات، مع الجوكر ويليام بويك، أفضل جوكر في ميدان. على الرغم من الانطلاق من المركز 7، إلا أن خبرتهما معاً تجعلهما مرشحاً قوياً."
+  },
+  "races": [
+    {
+      "raceNumber": 1,
+      "raceName": "DEEPAL S05 - MAIDEN",
+      "predictions": [
+        {"position": 1, "horse": "KEY OF MAGIC (USA)", "draw": 7, "confidence": "75%", "analysis": "تشارلز أبلبي + ويليام بويك = ترشيح ذهبي. الفرس تملك إمكانيات عالية."},
+        {"position": 2, "horse": "CHARMING LIFE (IRE)", "draw": 1, "confidence": "70%", "analysis": "الانطلاق من المركز 1 مع الجوكر كيران شومارك، فرصة قوية."},
+        {"position": 3, "horse": "RAASIL (USA)", "draw": 9, "confidence": "65%", "analysis": "مدرب بهوبات سيمار في حالة جيدة، الجوكر ريتشارد مولين خبير."}
+      ],
+      "valuePick": {"horse": "VOLCANIC ROCK (IRE)", "draw": 4, "reason": "سعيد بن سروور + الجوكر أوسين أور - قيمة جيدة"}
+    },
+    {
+      "raceNumber": 2,
+      "raceName": "DEEPAL S07 - HANDICAP (80-100)",
+      "predictions": [
+        {"position": 1, "horse": "POWER MODE (USA)", "draw": 2, "confidence": "70%", "analysis": "بهوبات سيمار + تادغ أوشيا - ثنائي ناجح في ميدان."},
+        {"position": 2, "horse": "OLYMPUS POINT (IRE)", "draw": 8, "confidence": "65%", "analysis": "أحمد بن حرمش مع كونور بيزلي في حالة ممتازة."},
+        {"position": 3, "horse": "MAJOR CINNAMON (USA)", "draw": 12, "confidence": "60%", "analysis": "أدري دي فريس يقدم مستويات ثابتة."}
+      ],
+      "valuePick": {"horse": "SUBITO (USA)", "draw": 6, "reason": "ميكائيل بارزالونا - جوكر مهاجم"}
+    },
+    {
+      "raceNumber": 3,
+      "raceName": "UAE OAKS",
+      "predictions": [
+        {"position": 1, "horse": "LABWAH (USA)", "draw": 1, "confidence": "80%", "analysis": "ترشيح اليوم! سالم بن غداير + برناردو بينيرو. المركز 1 مثالي."},
+        {"position": 2, "horse": "TJAREED (USA)", "draw": 2, "confidence": "70%", "analysis": "سيلفستر دي سوزا - جوكر من الطراز الرفيع."},
+        {"position": 3, "horse": "DOZALLA (USA)", "draw": 3, "confidence": "65%", "analysis": "بهوبات سيمار في سباقات الفرسات."}
+      ],
+      "valuePick": {"horse": "PRETTY AND FAMOUS (USA)", "draw": 5, "reason": "دوج واتسون + باتريك دوبس"}
+    },
+    {
+      "raceNumber": 4,
+      "raceName": "Touch The Future",
+      "predictions": [
+        {"position": 1, "horse": "MASAI MOON (GB)", "draw": 10, "confidence": "75%", "analysis": "تشارلز أبلبي + ويليام بويك - القوة القاهرة."},
+        {"position": 2, "horse": "LANEQASH (GB)", "draw": 7, "confidence": "70%", "analysis": "بهوبات سيمار + تادغ أوشيا."},
+        {"position": 3, "horse": "CHIBITTY (FR)", "draw": 1, "confidence": "65%", "analysis": "ديفيد سيمكوك + توم ماركوند."}
+      ],
+      "valuePick": {"horse": "ACAPULCO BAY (IRE)", "draw": 3, "reason": "سالم بن غداير + أدري دي فريس"}
+    },
+    {
+      "raceNumber": 5,
+      "raceName": "DEEPAL Super Hybrid",
+      "predictions": [
+        {"position": 1, "horse": "SHOOTOUT (IRE)", "draw": 1, "confidence": "75%", "analysis": "دوج واتسون + أدري دي فريس. المركز 1 + التراب = فوز."},
+        {"position": 2, "horse": "SHAQ DIESEL (USA)", "draw": 2, "confidence": "70%", "analysis": "بهوبات سيمار + تادغ أوشيا."},
+        {"position": 3, "horse": "STROBE (USA)", "draw": 4, "confidence": "65%", "analysis": "سيمون وإد كريسفورد."}
+      ],
+      "valuePick": {"horse": "ZANDVOORT (USA)", "draw": 6, "reason": "سيلفستر دي سوزا - جوكر متميز"}
+    },
+    {
+      "raceNumber": 6,
+      "raceName": "BALANCHINE (Group 2)",
+      "predictions": [
+        {"position": 1, "horse": "DUBAI TREASURE (IRE)", "draw": 2, "confidence": "80%", "analysis": "تشارلز أبلبي + أوسين أور. سباق المجموعة 2."},
+        {"position": 2, "horse": "BLUE NAZARE (IRE)", "draw": 6, "confidence": "75%", "analysis": "ويليام بويك على متن حصان أبلبي آخر."},
+        {"position": 3, "horse": "DUBAI BEACH (IRE)", "draw": 1, "confidence": "70%", "analysis": "سعيد بن سروور + كيران شومارك."}
+      ],
+      "valuePick": {"horse": "RIYABOVKA (FR)", "draw": 5, "reason": "أندرو سلاتري - قيمة"}
+    },
+    {
+      "raceNumber": 7,
+      "raceName": "DUBAI ROAD TO KENTUCKY DERBY",
+      "predictions": [
+        {"position": 1, "horse": "SALLOOM (USA)", "draw": 1, "confidence": "80%", "analysis": "المركز 1 على التراب + تادغ أوشيا = مرشح قوي."},
+        {"position": 2, "horse": "OMAHA FRONT (USA)", "draw": 6, "confidence": "75%", "analysis": "بهوبات سيمار + أندرو سلاتري."},
+        {"position": 3, "horse": "LINO PADRINO (USA)", "draw": 2, "confidence": "70%", "analysis": "ريتشارد مولين خبير."}
+      ],
+      "valuePick": {"horse": "WATCH COLLECTOR (USA)", "draw": 7, "reason": "ويليام بويك - لا يمكن تجاهله"}
+    },
+    {
+      "raceNumber": 8,
+      "raceName": "NAD AL SHEBA TROPHY (Group 3)",
+      "predictions": [
+        {"position": 1, "horse": "BY THE BOOK (IRE)", "draw": 3, "confidence": "75%", "analysis": "ويليام بويك في سباق المسافات الطويلة."},
+        {"position": 2, "horse": "AL NAYYIR (GB)", "draw": 2, "confidence": "70%", "analysis": "روسا رايان في حالة ممتازة."},
+        {"position": 3, "horse": "SUNWAY (FR)", "draw": 1, "confidence": "65%", "analysis": "سيلفستر دي سوزا + المركز 1."}
+      ],
+      "valuePick": {"horse": "KIHAVAH (GB)", "draw": 5, "reason": "باتريك دوبس - قيمة جيدة"}
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "date": "2026-02-20",
+  "venue": "Meydan",
+  "races": [
+    {
+      "raceNumber": 1,
+      "time": "17:30",
+      "name": "DEEPAL S05 - MAIDEN",
+      "surface": "Turf",
+      "distance": "1400m",
+      "entries": []
+    },
+    {
+      "raceNumber": 2,
+      "time": "18:05",
+      "name": "DEEPAL S07 - HANDICAP",
+      "surface": "Dirt",
+      "distance": "1400m",
+      "entries": []
+    },
+    {
+      "raceNumber": 3,
+      "time": "18:40",
+      "name": "UAE OAKS",
+      "surface": "Dirt",
+      "distance": "1900m",
+      "entries": []
+    },
+    {
+      "raceNumber": 4,
+      "time": "19:15",
+      "name": "Touch The Future",
+      "surface": "Turf",
+      "distance": "1800m",
+      "entries": []
+    },
+    {
+      "raceNumber": 5,
+      "time": "19:50",
+      "name": "DEEPAL Super Hybrid",
+      "surface": "Dirt",
+      "distance": "2000m",
+      "entries": []
+    },
+    {
+      "raceNumber": 6,
+      "time": "20:25",
+      "name": "BALANCHINE (Group 2)",
+      "surface": "Turf",
+      "distance": "1800m",
+      "entries": []
+    },
+    {
+      "raceNumber": 7,
+      "time": "21:00",
+      "name": "KENTUCKY DERBY TRIAL",
+      "surface": "Dirt",
+      "distance": "1900m",
+      "entries": []
+    },
+    {
+      "raceNumber": 8,
+      "time": "21:45",
+      "name": "NAD AL SHEBA TROPHY",
+      "surface": "Turf",
+      "distance": "2800m",
+      "entries": []
+    }
+  ]
+}

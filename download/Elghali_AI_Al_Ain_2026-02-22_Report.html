@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elghali AI - Al Ain 2026-02-22</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #fef3e2 0%, #ffffff 100%);
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(139, 0, 0, 0.15);
+      overflow: hidden;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #8B0000 0%, #A52A2A 50%, #8B0000 100%);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+    
+    .logo {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    
+    .header h1 {
+      font-size: 28px;
+      color: #D4AF37;
+      margin-bottom: 5px;
+    }
+    
+    .header .subtitle {
+      color: #f0d0a0;
+      font-size: 16px;
+    }
+    
+    .header .meta {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .header .meta-item {
+      text-align: center;
+    }
+    
+    .header .meta-value {
+      font-size: 20px;
+      font-weight: bold;
+      color: #D4AF37;
+    }
+    
+    .header .meta-label {
+      font-size: 12px;
+      color: #f0d0a0;
+    }
+    
+    .content {
+      padding: 30px;
+    }
+    
+    .nap-section {
+      background: linear-gradient(135deg, #FFF8DC 0%, #FFFACD 100%);
+      border: 2px solid #D4AF37;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    
+    .nap-section .label {
+      font-size: 14px;
+      color: #8B0000;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .nap-section .horse-name {
+      font-size: 32px;
+      font-weight: bold;
+      color: #D4AF37;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+    
+    .nap-section .race-name {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+    
+    .nap-section .confidence {
+      display: inline-block;
+      background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    
+    .nap-section .reason {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #555;
+    }
+    
+    .picks-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .pick-card {
+      background: #f8f9fa;
+      border-radius: 10px;
+      padding: 20px;
+      border-left: 4px solid #D4AF37;
+    }
+    
+    .pick-card .label {
+      font-size: 12px;
+      color: #8B0000;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    
+    .pick-card .horse-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 5px;
+    }
+    
+    .pick-card .race-name {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+    
+    .pick-card .reason {
+      font-size: 12px;
+      color: #555;
+    }
+    
+    .race-section {
+      margin-bottom: 30px;
+      page-break-inside: avoid;
+    }
+    
+    .race-header {
+      background: linear-gradient(135deg, #8B0000 0%, #A52A2A 100%);
+      color: white;
+      padding: 15px 20px;
+      border-radius: 10px 10px 0 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .race-header .race-title {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    
+    .race-header .race-info {
+      font-size: 12px;
+      color: #f0d0a0;
+    }
+    
+    .race-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 0 0 10px 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    .race-table th {
+      background: #f8f9fa;
+      padding: 12px 8px;
+      text-align: right;
+      font-size: 11px;
+      font-weight: bold;
+      color: #8B0000;
+      border-bottom: 2px solid #D4AF37;
+    }
+    
+    .race-table td {
+      padding: 10px 8px;
+      text-align: right;
+      font-size: 12px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .race-table tr:nth-child(1) {
+      background: linear-gradient(90deg, #FFF8DC 0%, transparent 100%);
+    }
+    
+    .race-table tr:nth-child(2) {
+      background: linear-gradient(90deg, #f0f0f0 0%, transparent 100%);
+    }
+    
+    .race-table tr:nth-child(3) {
+      background: linear-gradient(90deg, #ffe4c4 0%, transparent 100%);
+    }
+    
+    .position-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 12px;
+      color: white;
+    }
+    
+    .position-1 { background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); }
+    .position-2 { background: linear-gradient(135deg, #C0C0C0 0%, #A0A0A0 100%); }
+    .position-3 { background: linear-gradient(135deg, #CD7F32 0%, #B8860B 100%); }
+    .position-other { background: #ccc; }
+    
+    .power-bar {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .power-bar-fill {
+      height: 8px;
+      background: linear-gradient(90deg, #28a745 0%, #ffc107 50%, #dc3545 100%);
+      border-radius: 4px;
+    }
+    
+    .power-bar-text {
+      font-weight: bold;
+      font-size: 11px;
+      color: #8B0000;
+    }
+    
+    .value-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 10px;
+      font-weight: bold;
+    }
+    
+    .value-excellent { background: #28a745; color: white; }
+    .value-good { background: #17a2b8; color: white; }
+    .value-fair { background: #ffc107; color: #333; }
+    .value-poor { background: #6c757d; color: white; }
+    
+    .analysis-section {
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 0 0 10px 10px;
+      font-size: 12px;
+    }
+    
+    .analysis-item {
+      margin-bottom: 10px;
+    }
+    
+    .analysis-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .analysis-item strong {
+      color: #8B0000;
+    }
+    
+    .strengths {
+      color: #28a745;
+    }
+    
+    .concerns {
+      color: #dc3545;
+    }
+    
+    .footer {
+      background: #8B0000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .footer p {
+      font-size: 12px;
+      color: #f0d0a0;
+      margin-bottom: 5px;
+    }
+    
+    .footer .warning {
+      font-size: 11px;
+      color: #ffc107;
+      padding: 10px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    
+    .watermark {
+      position: fixed;
+      bottom: 50%;
+      right: 50%;
+      transform: translate(50%, 50%);
+      font-size: 80px;
+      color: rgba(139, 0, 0, 0.03);
+      font-weight: bold;
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      
+      .container {
+        box-shadow: none;
+      }
+      
+      .race-section {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="watermark">ELGHALI AI</div>
+  
+  <div class="container">
+    <div class="header">
+      <div class="logo">🏇</div>
+      <h1>Elghali AI</h1>
+      <p class="subtitle">نظام الذكاء الاصطناعي لترشيحات سباقات الخيل</p>
+      
+      <div class="meta">
+        <div class="meta-item">
+          <div class="meta-value">Al Ain</div>
+          <div class="meta-label">المضمار</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-value">2026-02-22</div>
+          <div class="meta-label">التاريخ</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-value">10</div>
+          <div class="meta-label">السباقات</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-value">UAE</div>
+          <div class="meta-label">الدولة</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="content">
+      <!-- NAP of the Day -->
+      <div class="nap-section">
+        <div class="label">🌟 ترشيح اليوم - NAP of the Day</div>
+        <div class="horse-name">1. Masoud Al Khalediah</div>
+        <div class="race-name">Purebred Arabian Fillies Maiden Stakes (Dirt)</div>
+        <div class="confidence">99% ثقة</div>
+        <div class="reason">Power Score: 81.4 | Win: 30.0% | الفارس: Bernardo Pinheiro</div>
+      </div>
+      
+      <!-- Quick Picks -->
+      <div class="picks-grid">
+        <div class="pick-card">
+          <div class="label">📈 الترشيح الثاني</div>
+          <div class="horse-name">1. Ab Tahan</div>
+          <div class="race-name">Purebred Arabian Handicap (Dirt)</div>
+          <div class="reason">Power Score: 81.2 | الفارس: Ray Dawson</div>
+        </div>
+        <div class="pick-card">
+          <div class="label">💎 ترشيح القيمة</div>
+          <div class="horse-name">1. Maestro</div>
+          <div class="race-name">Second Leg of the Al Ain Marathon Series (Dirt)</div>
+          <div class="reason">Value: Fair | Power: 81.2</div>
+        </div>
+      </div>
+      
+      <!-- Race by Race Analysis -->
+      
+        <div class="race-section">
+          <div class="race-header">
+            <div class="race-title">🏆 السباق 1: Purebred Arabian Maiden Stakes (Dirt)</div>
+            <div class="race-info">1800م | Dirt | Fast | 16:00</div>
+          </div>
+          
+          <table class="race-table">
+            <thead>
+              <tr>
+                <th>المركز</th>
+                <th>رقم</th>
+                <th>الحصان</th>
+                <th>البوابة</th>
+                <th>الفارس</th>
+                <th>التقييم</th>
+                <th>القوة</th>
+                <th>الفوز</th>
+                <th>القيمة</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td><span class="position-badge position-1">1</span></td>
+                  <td>1</td>
+                  <td><strong>Tair Grine</strong></td>
+                  <td>1</td>
+                  <td>Tadhg O'Shea</td>
+                  <td>75</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 76px"></div>
+                      <span class="power-bar-text">76.0</span>
+                    </div>
+                  </td>
+                  <td>26.6%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-2">2</span></td>
+                  <td>4</td>
+                  <td><strong>Alyah</strong></td>
+                  <td>4</td>
+                  <td>Bernardo Pinheiro</td>
+                  <td>72</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 73.2px"></div>
+                      <span class="power-bar-text">73.2</span>
+                    </div>
+                  </td>
+                  <td>17.8%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-3">3</span></td>
+                  <td>5</td>
+                  <td><strong>Mouzaffar De Monlau</strong></td>
+                  <td>5</td>
+                  <td>Hamed Busaidi</td>
+                  <td>71</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 68.2px"></div>
+                      <span class="power-bar-text">68.2</span>
+                    </div>
+                  </td>
+                  <td>12.8%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-other">4</span></td>
+                  <td>2</td>
+                  <td><strong>AF Mut'aab</strong></td>
+                  <td>2</td>
+                  <td>Sandro Paiva</td>
+                  <td>70</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 68.1px"></div>
+                      <span class="power-bar-text">68.1</span>
+                    </div>
+                  </td>
+                  <td>9.3%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-other">5</span></td>
+                  <td>3</td>
+                  <td><strong>AF Yalby</strong></td>
+                  <td>3</td>
+                  <td>Marcelino Rodrigues</td>
+                  <td>68</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 61.4px"></div>
+                      <span class="power-bar-text">61.4</span>
+                    </div>
+                  </td>
+                  <td>8.1%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+            </tbody>
+          </table>
+          
+          <div class="analysis-section">
+            
+              <div class="analysis-item">
+                <strong>1. Tair Grine</strong> (Tadhg O'Shea)
+                <span class="strengths">✓ فارس من الطراز الأول • سرعة عالية وتقييم ممتاز</span>
+                
+              </div>
+            
+              <div class="analysis-item">
+                <strong>2. Alyah</strong> (Bernardo Pinheiro)
+                <span class="strengths">✓ فارس من الطراز الأول • مدرب ذو خبرة وسجل ممتاز</span>
+                <span class="concerns">⚠ شكل ضعيف مؤخراً</span>
+              </div>
+            
+              <div class="analysis-item">
+                <strong>3. Mouzaffar De Monlau</strong> (Hamed Busaidi)
+                <span class="strengths">✓ يتألق على هذا السطح • نسل ممتاز</span>
+                <span class="concerns">⚠ شكل ضعيف مؤخراً</span>
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="race-section">
+          <div class="race-header">
+            <div class="race-title">🏆 السباق 2: Purebred Arabian Maiden Stakes (Dirt)</div>
+            <div class="race-info">1400م | Dirt | Fast | 16:30</div>
+          </div>
+          
+          <table class="race-table">
+            <thead>
+              <tr>
+                <th>المركز</th>
+                <th>رقم</th>
+                <th>الحصان</th>
+                <th>البوابة</th>
+                <th>الفارس</th>
+                <th>التقييم</th>
+                <th>القوة</th>
+                <th>الفوز</th>
+                <th>القيمة</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td><span class="position-badge position-1">1</span></td>
+                  <td>1</td>
+                  <td><strong>Qowat Al Emarat</strong></td>
+                  <td>1</td>
+                  <td>Jesus Rosales</td>
+                  <td>76</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 74.7px"></div>
+                      <span class="power-bar-text">74.7</span>
+                    </div>
+                  </td>
+                  <td>27.5%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-2">2</span></td>
+                  <td>2</td>
+                  <td><strong>Ahmazij</strong></td>
+                  <td>2</td>
+                  <td>James Doyle</td>
+                  <td>74</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 74.1px"></div>
+                      <span class="power-bar-text">74.1</span>
+                    </div>
+                  </td>
+                  <td>18.9%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-3">3</span></td>
+                  <td>3</td>
+                  <td><strong>Mouzaffar De Monlau</strong></td>
+                  <td>3</td>
+                  <td>Bernardo Pinheiro</td>
+                  <td>73</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 70px"></div>
+                      <span class="power-bar-text">70.0</span>
+                    </div>
+                  </td>
+                  <td>13.9%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-other">4</span></td>
+                  <td>4</td>
+                  <td><strong>AF Radhgham</strong></td>
+                  <td>4</td>
+                  <td>Hamed Busaidi</td>
+                  <td>71</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 65.4px"></div>
+                      <span class="power-bar-text">65.4</span>
+                    </div>
+                  </td>
+                  <td>9.4%</td>
+                  <td><span class="value-badge value-good">Good</span></td>
+                </tr>
+              
+            </tbody>
+          </table>
+          
+          <div class="analysis-section">
+            
+              <div class="analysis-item">
+                <strong>1. Qowat Al Emarat</strong> (Jesus Rosales)
+                <span class="strengths">✓ سرعة عالية وتقييم ممتاز • يتألق على هذا السطح</span>
+                
+              </div>
+            
+              <div class="analysis-item">
+                <strong>2. Ahmazij</strong> (James Doyle)
+                <span class="strengths">✓ فارس من الطراز الأول • يتألق على هذا السطح</span>
+                
+              </div>
+            
+              <div class="analysis-item">
+                <strong>3. Mouzaffar De Monlau</strong> (Bernardo Pinheiro)
+                <span class="strengths">✓ فارس من الطراز الأول • يتألق على هذا السطح</span>
+                <span class="concerns">⚠ شكل ضعيف مؤخراً</span>
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="race-section">
+          <div class="race-header">
+            <div class="race-title">🏆 السباق 3: Rated Maiden Stakes (Dirt)</div>
+            <div class="race-info">1600م | Dirt | Fast | 17:00</div>
+          </div>
+          
+          <table class="race-table">
+            <thead>
+              <tr>
+                <th>المركز</th>
+                <th>رقم</th>
+                <th>الحصان</th>
+                <th>البوابة</th>
+                <th>الفارس</th>
+                <th>التقييم</th>
+                <th>القوة</th>
+                <th>الفوز</th>
+                <th>القيمة</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td><span class="position-badge position-1">1</span></td>
+                  <td>1</td>
+                  <td><strong>Kaseh Al Shahama</strong></td>
+                  <td>1</td>
+                  <td>William Buick</td>
+                  <td>78</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 79px"></div>
+                      <span class="power-bar-text">79.0</span>
+                    </div>
+                  </td>
+                  <td>29.1%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-2">2</span></td>
+                  <td>4</td>
+                  <td><strong>Dhafer Aw</strong></td>
+                  <td>4</td>
+                  <td>Bernardo Pinheiro</td>
+                  <td>76</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 72.8px"></div>
+                      <span class="power-bar-text">72.8</span>
+                    </div>
+                  </td>
+                  <td>18.6%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-3">3</span></td>
+                  <td>2</td>
+                  <td><strong>Almaal</strong></td>
+                  <td>2</td>
+                  <td>Sandro Paiva</td>
+                  <td>75</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 72.2px"></div>
+                      <span class="power-bar-text">72.2</span>
+                    </div>
+                  </td>
+                  <td>14.3%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-other">4</span></td>
+                  <td>3</td>
+                  <td><strong>Aljamri</strong></td>
+                  <td>3</td>
+                  <td>James Doyle</td>
+                  <td>73</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 70.7px"></div>
+                      <span class="power-bar-text">70.7</span>
+                    </div>
+                  </td>
+                  <td>10.2%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+            </tbody>
+          </table>
+          
+          <div class="analysis-section">
+            
+              <div class="analysis-item">
+                <strong>1. Kaseh Al Shahama</strong> (William Buick)
+                <span class="strengths">✓ فارس من الطراز الأول • سرعة عالية وتقييم ممتاز</span>
+                
+              </div>
+            
+              <div class="analysis-item">
+                <strong>2. Dhafer Aw</strong> (Bernardo Pinheiro)
+                <span class="strengths">✓ فارس من الطراز الأول • سرعة عالية وتقييم ممتاز</span>
+                
+              </div>
+            
+              <div class="analysis-item">
+                <strong>3. Almaal</strong> (Sandro Paiva)
+                <span class="strengths">✓ يتألق على هذا السطح • نسل ممتاز</span>
+                
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="race-section">
+          <div class="race-header">
+            <div class="race-title">🏆 السباق 4: Purebred Arabian Handicap (Dirt)</div>
+            <div class="race-info">1800م | Dirt | Fast | 17:30</div>
+          </div>
+          
+          <table class="race-table">
+            <thead>
+              <tr>
+                <th>المركز</th>
+                <th>رقم</th>
+                <th>الحصان</th>
+                <th>البوابة</th>
+                <th>الفارس</th>
+                <th>التقييم</th>
+                <th>القوة</th>
+                <th>الفوز</th>
+                <th>القيمة</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td><span class="position-badge position-1">1</span></td>
+                  <td>1</td>
+                  <td><strong>Mukafih</strong></td>
+                  <td>1</td>
+                  <td>Sandro Paiva</td>
+                  <td>82</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 78.9px"></div>
+                      <span class="power-bar-text">78.9</span>
+                    </div>
+                  </td>
+                  <td>29.1%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-2">2</span></td>
+                  <td>2</td>
+                  <td><strong>Hob Seddiq</strong></td>
+                  <td>2</td>
+                  <td>Ray Dawson</td>
+                  <td>80</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 75.3px"></div>
+                      <span class="power-bar-text">75.3</span>
+                    </div>
+                  </td>
+                  <td>19.2%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-3">3</span></td>
+                  <td>3</td>
+                  <td><strong>Es Shnaf</strong></td>
+                  <td>3</td>
+                  <td>Qais Busaidi</td>
+                  <td>78</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 72.1px"></div>
+                      <span class="power-bar-text">72.1</span>
+                    </div>
+                  </td>
+                  <td>14.3%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-other">4</span></td>
+                  <td>4</td>
+                  <td><strong>Kaseh Al Shahama</strong></td>
+                  <td>4</td>
+                  <td>Marcelino Rodrigues</td>
+                  <td>79</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 72px"></div>
+                      <span class="power-bar-text">72.0</span>
+                    </div>
+                  </td>
+                  <td>10.3%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+            </tbody>
+          </table>
+          
+          <div class="analysis-section">
+            
+              <div class="analysis-item">
+                <strong>1. Mukafih</strong> (Sandro Paiva)
+                <span class="strengths">✓ سرعة عالية وتقييم ممتاز • مناسب للمسافة</span>
+                
+              </div>
+            
+              <div class="analysis-item">
+                <strong>2. Hob Seddiq</strong> (Ray Dawson)
+                <span class="strengths">✓ سرعة عالية وتقييم ممتاز • يتألق على هذا السطح</span>
+                
+              </div>
+            
+              <div class="analysis-item">
+                <strong>3. Es Shnaf</strong> (Qais Busaidi)
+                <span class="strengths">✓ سرعة عالية وتقييم ممتاز • يتألق على هذا السطح</span>
+                
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="race-section">
+          <div class="race-header">
+            <div class="race-title">🏆 السباق 5: Purebred Arabian Fillies Maiden Stakes (Dirt)</div>
+            <div class="race-info">1400م | Dirt | Fast | 18:00</div>
+          </div>
+          
+          <table class="race-table">
+            <thead>
+              <tr>
+                <th>المركز</th>
+                <th>رقم</th>
+                <th>الحصان</th>
+                <th>البوابة</th>
+                <th>الفارس</th>
+                <th>التقييم</th>
+                <th>القوة</th>
+                <th>الفوز</th>
+                <th>القيمة</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td><span class="position-badge position-1">1</span></td>
+                  <td>1</td>
+                  <td><strong>Masoud Al Khalediah</strong></td>
+                  <td>1</td>
+                  <td>Bernardo Pinheiro</td>
+                  <td>88</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 81.4px"></div>
+                      <span class="power-bar-text">81.4</span>
+                    </div>
+                  </td>
+                  <td>30.0%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-2">2</span></td>
+                  <td>2</td>
+                  <td><strong>Muthabir</strong></td>
+                  <td>2</td>
+                  <td>Abdul Al Balushi</td>
+                  <td>85</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 76.9px"></div>
+                      <span class="power-bar-text">76.9</span>
+                    </div>
+                  </td>
+                  <td>19.6%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-3">3</span></td>
+                  <td>3</td>
+                  <td><strong>Nimir</strong></td>
+                  <td>3</td>
+                  <td>Silvestre De Sousa</td>
+                  <td>83</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 76.4px"></div>
+                      <span class="power-bar-text">76.4</span>
+                    </div>
+                  </td>
+                  <td>15.1%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-other">4</span></td>
+                  <td>4</td>
+                  <td><strong>Jouad De Carrere</strong></td>
+                  <td>4</td>
+                  <td>Allaia Tiar</td>
+                  <td>80</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 69.5px"></div>
+                      <span class="power-bar-text">69.5</span>
+                    </div>
+                  </td>
+                  <td>10.0%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+            </tbody>
+          </table>
+          
+          <div class="analysis-section">
+            
+              <div class="analysis-item">
+                <strong>1. Masoud Al Khalediah</strong> (Bernardo Pinheiro)
+                <span class="strengths">✓ فارس من الطراز الأول • سرعة عالية وتقييم ممتاز</span>
+                
+              </div>
+            
+              <div class="analysis-item">
+                <strong>2. Muthabir</strong> (Abdul Al Balushi)
+                <span class="strengths">✓ سرعة عالية وتقييم ممتاز • مناسب للمسافة</span>
+                
+              </div>
+            
+              <div class="analysis-item">
+                <strong>3. Nimir</strong> (Silvestre De Sousa)
+                <span class="strengths">✓ فارس من الطراز الأول • مدرب ذو خبرة وسجل ممتاز</span>
+                
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="race-section">
+          <div class="race-header">
+            <div class="race-title">🏆 السباق 6: Purebred Arabian Handicap (Dirt)</div>
+            <div class="race-info">2000م | Dirt | Fast | 18:30</div>
+          </div>
+          
+          <table class="race-table">
+            <thead>
+              <tr>
+                <th>المركز</th>
+                <th>رقم</th>
+                <th>الحصان</th>
+                <th>البوابة</th>
+                <th>الفارس</th>
+                <th>التقييم</th>
+                <th>القوة</th>
+                <th>الفوز</th>
+                <th>القيمة</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td><span class="position-badge position-1">1</span></td>
+                  <td>1</td>
+                  <td><strong>Haka Du Soleil</strong></td>
+                  <td>1</td>
+                  <td>Tadhg O'Shea</td>
+                  <td>86</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 80.2px"></div>
+                      <span class="power-bar-text">80.2</span>
+                    </div>
+                  </td>
+                  <td>29.5%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-2">2</span></td>
+                  <td>2</td>
+                  <td><strong>Mubir Al Ain</strong></td>
+                  <td>2</td>
+                  <td>Silvestre De Sousa</td>
+                  <td>84</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 77.6px"></div>
+                      <span class="power-bar-text">77.6</span>
+                    </div>
+                  </td>
+                  <td>19.8%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-3">3</span></td>
+                  <td>3</td>
+                  <td><strong>HM Chamikha</strong></td>
+                  <td>3</td>
+                  <td>Qais Busaidi</td>
+                  <td>82</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 74.1px"></div>
+                      <span class="power-bar-text">74.1</span>
+                    </div>
+                  </td>
+                  <td>14.7%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-other">4</span></td>
+                  <td>4</td>
+                  <td><strong>AF Layt</strong></td>
+                  <td>4</td>
+                  <td>Ray Dawson</td>
+                  <td>80</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 72.7px"></div>
+                      <span class="power-bar-text">72.7</span>
+                    </div>
+                  </td>
+                  <td>10.4%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+            </tbody>
+          </table>
+          
+          <div class="analysis-section">
+            
+              <div class="analysis-item">
+                <strong>1. Haka Du Soleil</strong> (Tadhg O'Shea)
+                <span class="strengths">✓ فارس من الطراز الأول • سرعة عالية وتقييم ممتاز</span>
+                
+              </div>
+            
+              <div class="analysis-item">
+                <strong>2. Mubir Al Ain</strong> (Silvestre De Sousa)
+                <span class="strengths">✓ فارس من الطراز الأول • سرعة عالية وتقييم ممتاز</span>
+                
+              </div>
+            
+              <div class="analysis-item">
+                <strong>3. HM Chamikha</strong> (Qais Busaidi)
+                <span class="strengths">✓ سرعة عالية وتقييم ممتاز • يتألق على هذا السطح</span>
+                
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="race-section">
+          <div class="race-header">
+            <div class="race-title">🏆 السباق 7: Purebred Arabian Handicap (Dirt)</div>
+            <div class="race-info">1600م | Dirt | Fast | 19:00</div>
+          </div>
+          
+          <table class="race-table">
+            <thead>
+              <tr>
+                <th>المركز</th>
+                <th>رقم</th>
+                <th>الحصان</th>
+                <th>البوابة</th>
+                <th>الفارس</th>
+                <th>التقييم</th>
+                <th>القوة</th>
+                <th>الفوز</th>
+                <th>القيمة</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td><span class="position-badge position-1">1</span></td>
+                  <td>1</td>
+                  <td><strong>Ab Tahan</strong></td>
+                  <td>1</td>
+                  <td>Ray Dawson</td>
+                  <td>90</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 81.2px"></div>
+                      <span class="power-bar-text">81.2</span>
+                    </div>
+                  </td>
+                  <td>29.9%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-2">2</span></td>
+                  <td>2</td>
+                  <td><strong>Nibraas</strong></td>
+                  <td>2</td>
+                  <td>Jules Mobian</td>
+                  <td>88</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 77.3px"></div>
+                      <span class="power-bar-text">77.3</span>
+                    </div>
+                  </td>
+                  <td>19.7%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-3">3</span></td>
+                  <td>4</td>
+                  <td><strong>Mawaasem</strong></td>
+                  <td>4</td>
+                  <td>Tadhg O'Shea</td>
+                  <td>83</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 75.3px"></div>
+                      <span class="power-bar-text">75.3</span>
+                    </div>
+                  </td>
+                  <td>14.9%</td>
+                  <td><span class="value-badge value-excellent">Excellent</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-other">4</span></td>
+                  <td>3</td>
+                  <td><strong>Sihrlau</strong></td>
+                  <td>3</td>
+                  <td>Abdul Al Balushi</td>
+                  <td>85</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 73.3px"></div>
+                      <span class="power-bar-text">73.3</span>
+                    </div>
+                  </td>
+                  <td>10.5%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+            </tbody>
+          </table>
+          
+          <div class="analysis-section">
+            
+              <div class="analysis-item">
+                <strong>1. Ab Tahan</strong> (Ray Dawson)
+                <span class="strengths">✓ سرعة عالية وتقييم ممتاز • مناسب للمسافة</span>
+                
+              </div>
+            
+              <div class="analysis-item">
+                <strong>2. Nibraas</strong> (Jules Mobian)
+                <span class="strengths">✓ سرعة عالية وتقييم ممتاز • مناسب للمسافة</span>
+                
+              </div>
+            
+              <div class="analysis-item">
+                <strong>3. Mawaasem</strong> (Tadhg O'Shea)
+                <span class="strengths">✓ فارس من الطراز الأول • سرعة عالية وتقييم ممتاز</span>
+                
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="race-section">
+          <div class="race-header">
+            <div class="race-title">🏆 السباق 8: Purebred Arabian Handicap (Dirt)</div>
+            <div class="race-info">1800م | Dirt | Fast | 19:30</div>
+          </div>
+          
+          <table class="race-table">
+            <thead>
+              <tr>
+                <th>المركز</th>
+                <th>رقم</th>
+                <th>الحصان</th>
+                <th>البوابة</th>
+                <th>الفارس</th>
+                <th>التقييم</th>
+                <th>القوة</th>
+                <th>الفوز</th>
+                <th>القيمة</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td><span class="position-badge position-1">1</span></td>
+                  <td>1</td>
+                  <td><strong>Madeeha</strong></td>
+                  <td>1</td>
+                  <td>Tadhg O'Shea</td>
+                  <td>84</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 80.9px"></div>
+                      <span class="power-bar-text">80.9</span>
+                    </div>
+                  </td>
+                  <td>29.8%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-2">2</span></td>
+                  <td>2</td>
+                  <td><strong>Wafiyye Al Watba</strong></td>
+                  <td>2</td>
+                  <td>Silvestre De Sousa</td>
+                  <td>82</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 77.9px"></div>
+                      <span class="power-bar-text">77.9</span>
+                    </div>
+                  </td>
+                  <td>19.9%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-3">3</span></td>
+                  <td>3</td>
+                  <td><strong>HM Shamael</strong></td>
+                  <td>3</td>
+                  <td>Ray Dawson</td>
+                  <td>80</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 71.7px"></div>
+                      <span class="power-bar-text">71.7</span>
+                    </div>
+                  </td>
+                  <td>14.2%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-other">4</span></td>
+                  <td>4</td>
+                  <td><strong>Turoub</strong></td>
+                  <td>4</td>
+                  <td>Abdul Al Balushi</td>
+                  <td>78</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 69.7px"></div>
+                      <span class="power-bar-text">69.7</span>
+                    </div>
+                  </td>
+                  <td>10.0%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+            </tbody>
+          </table>
+          
+          <div class="analysis-section">
+            
+              <div class="analysis-item">
+                <strong>1. Madeeha</strong> (Tadhg O'Shea)
+                <span class="strengths">✓ فارس من الطراز الأول • سرعة عالية وتقييم ممتاز</span>
+                
+              </div>
+            
+              <div class="analysis-item">
+                <strong>2. Wafiyye Al Watba</strong> (Silvestre De Sousa)
+                <span class="strengths">✓ فارس من الطراز الأول • مدرب ذو خبرة وسجل ممتاز</span>
+                
+              </div>
+            
+              <div class="analysis-item">
+                <strong>3. HM Shamael</strong> (Ray Dawson)
+                <span class="strengths">✓ سرعة عالية وتقييم ممتاز • يتألق على هذا السطح</span>
+                <span class="concerns">⚠ شكل ضعيف مؤخراً</span>
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="race-section">
+          <div class="race-header">
+            <div class="race-title">🏆 السباق 9: Purebred Arabian Stakes (Dirt)</div>
+            <div class="race-info">1600م | Dirt | Fast | 20:00</div>
+          </div>
+          
+          <table class="race-table">
+            <thead>
+              <tr>
+                <th>المركز</th>
+                <th>رقم</th>
+                <th>الحصان</th>
+                <th>البوابة</th>
+                <th>الفارس</th>
+                <th>التقييم</th>
+                <th>القوة</th>
+                <th>الفوز</th>
+                <th>القيمة</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td><span class="position-badge position-1">1</span></td>
+                  <td>1</td>
+                  <td><strong>Asielah</strong></td>
+                  <td>1</td>
+                  <td>Jules Mobian</td>
+                  <td>88</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 79.5px"></div>
+                      <span class="power-bar-text">79.5</span>
+                    </div>
+                  </td>
+                  <td>29.3%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-2">2</span></td>
+                  <td>2</td>
+                  <td><strong>Muhhjah</strong></td>
+                  <td>2</td>
+                  <td>Ray Dawson</td>
+                  <td>87</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 78.2px"></div>
+                      <span class="power-bar-text">78.2</span>
+                    </div>
+                  </td>
+                  <td>20.0%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-3">3</span></td>
+                  <td>4</td>
+                  <td><strong>Rathowan</strong></td>
+                  <td>4</td>
+                  <td>Bernardo Pinheiro</td>
+                  <td>83</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 76.6px"></div>
+                      <span class="power-bar-text">76.6</span>
+                    </div>
+                  </td>
+                  <td>15.2%</td>
+                  <td><span class="value-badge value-excellent">Excellent</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-other">4</span></td>
+                  <td>3</td>
+                  <td><strong>Anwaar</strong></td>
+                  <td>3</td>
+                  <td>Hamed Busaidi</td>
+                  <td>85</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 71.9px"></div>
+                      <span class="power-bar-text">71.9</span>
+                    </div>
+                  </td>
+                  <td>10.3%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+            </tbody>
+          </table>
+          
+          <div class="analysis-section">
+            
+              <div class="analysis-item">
+                <strong>1. Asielah</strong> (Jules Mobian)
+                <span class="strengths">✓ سرعة عالية وتقييم ممتاز • مناسب للمسافة</span>
+                
+              </div>
+            
+              <div class="analysis-item">
+                <strong>2. Muhhjah</strong> (Ray Dawson)
+                <span class="strengths">✓ سرعة عالية وتقييم ممتاز • مناسب للمسافة</span>
+                
+              </div>
+            
+              <div class="analysis-item">
+                <strong>3. Rathowan</strong> (Bernardo Pinheiro)
+                <span class="strengths">✓ فارس من الطراز الأول • سرعة عالية وتقييم ممتاز</span>
+                
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="race-section">
+          <div class="race-header">
+            <div class="race-title">🏆 السباق 10: Second Leg of the Al Ain Marathon Series (Dirt)</div>
+            <div class="race-info">3200م | Dirt | Fast | 20:30</div>
+          </div>
+          
+          <table class="race-table">
+            <thead>
+              <tr>
+                <th>المركز</th>
+                <th>رقم</th>
+                <th>الحصان</th>
+                <th>البوابة</th>
+                <th>الفارس</th>
+                <th>التقييم</th>
+                <th>القوة</th>
+                <th>الفوز</th>
+                <th>القيمة</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td><span class="position-badge position-1">1</span></td>
+                  <td>1</td>
+                  <td><strong>Maestro</strong></td>
+                  <td>1</td>
+                  <td>Richard Mullen</td>
+                  <td>90</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 81.2px"></div>
+                      <span class="power-bar-text">81.2</span>
+                    </div>
+                  </td>
+                  <td>28.4%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-2">2</span></td>
+                  <td>3</td>
+                  <td><strong>Mirqab</strong></td>
+                  <td>3</td>
+                  <td>Ray Dawson</td>
+                  <td>86</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 77.8px"></div>
+                      <span class="power-bar-text">77.8</span>
+                    </div>
+                  </td>
+                  <td>18.9%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-3">3</span></td>
+                  <td>2</td>
+                  <td><strong>Maasai Du Soleil</strong></td>
+                  <td>2</td>
+                  <td>Carlos Henrique</td>
+                  <td>88</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 76.6px"></div>
+                      <span class="power-bar-text">76.6</span>
+                    </div>
+                  </td>
+                  <td>14.4%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-other">4</span></td>
+                  <td>4</td>
+                  <td><strong>Tair Grine</strong></td>
+                  <td>4</td>
+                  <td>Mohamed Salym</td>
+                  <td>84</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 73.5px"></div>
+                      <span class="power-bar-text">73.5</span>
+                    </div>
+                  </td>
+                  <td>10.0%</td>
+                  <td><span class="value-badge value-fair">Fair</span></td>
+                </tr>
+              
+                <tr>
+                  <td><span class="position-badge position-other">5</span></td>
+                  <td>5</td>
+                  <td><strong>Nasaim Baynounah</strong></td>
+                  <td>5</td>
+                  <td>Sandro Paiva</td>
+                  <td>82</td>
+                  <td>
+                    <div class="power-bar">
+                      <div class="power-bar-fill" style="width: 71.6px"></div>
+                      <span class="power-bar-text">71.6</span>
+                    </div>
+                  </td>
+                  <td>9.5%</td>
+                  <td><span class="value-badge value-excellent">Excellent</span></td>
+                </tr>
+              
+            </tbody>
+          </table>
+          
+          <div class="analysis-section">
+            
+              <div class="analysis-item">
+                <strong>1. Maestro</strong> (Richard Mullen)
+                <span class="strengths">✓ سرعة عالية وتقييم ممتاز • مناسب للمسافة</span>
+                
+              </div>
+            
+              <div class="analysis-item">
+                <strong>2. Mirqab</strong> (Ray Dawson)
+                <span class="strengths">✓ سرعة عالية وتقييم ممتاز • مناسب للمسافة</span>
+                
+              </div>
+            
+              <div class="analysis-item">
+                <strong>3. Maasai Du Soleil</strong> (Carlos Henrique)
+                <span class="strengths">✓ سرعة عالية وتقييم ممتاز • يتألق على هذا السطح</span>
+                
+              </div>
+            
+          </div>
+        </div>
+      
+    </div>
+    
+    <div class="footer">
+      <p>© 2025 Elghali AI - جميع الحقوق محفوظة</p>
+      <p>تم إنشاء التقرير: 22‏/2‏/2026، 12:56:13 م</p>
+      <div class="warning">
+        ⚠️ تنبيه: هذه الترشيحات مبنية على تحليل الذكاء الاصطناعي للبيانات المتاحة.
+        المراهنة تنطوي على مخاطر - الرجاء المراهنة بمسؤولية.
+      </div>
+    </div>
+  </div>
+</body>
+</html>

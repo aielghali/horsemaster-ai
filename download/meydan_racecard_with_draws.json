@@ -1,0 +1,590 @@
+{
+  "date": "2026-02-20",
+  "venue": "Meydan",
+  "races": [
+    {
+      "raceNumber": 1,
+      "time": "17:30",
+      "name": "DEEPAL S05 - MAIDEN",
+      "surface": "Turf",
+      "distance": "1400m",
+      "prize": "AED 165,000",
+      "entries": [
+        {
+          "draw": 1,
+          "horse": "CHARMING LIFE (IRE)",
+          "jockey": "Kieran Shoemark",
+          "trainer": "Musabbeh Al Mheiri"
+        },
+        {
+          "draw": 2,
+          "horse": "HIDDEN SECRET (IRE)",
+          "jockey": "Connor Beasley",
+          "trainer": "Ahmad bin Harmash"
+        },
+        {
+          "draw": 3,
+          "horse": "MR PRECOCIOUS (USA)",
+          "jockey": "Bernardo Pinheiro",
+          "trainer": "Salem bin Ghadayer"
+        },
+        {
+          "draw": 4,
+          "horse": "VOLCANIC ROCK (IRE)",
+          "jockey": "Oisin Orr",
+          "trainer": "Saeed bin Suroor"
+        },
+        {
+          "draw": 5,
+          "horse": "CATSTYLE (USA)",
+          "jockey": "Jose Santiago",
+          "trainer": "Salem bin Ghadayer"
+        },
+        {
+          "draw": 6,
+          "horse": "DIAMONDAIRES WILL (USA)",
+          "jockey": "Patrick Dobbs",
+          "trainer": "Doug Watson"
+        },
+        {
+          "draw": 7,
+          "horse": "KEY OF MAGIC (USA)",
+          "jockey": "William Buick",
+          "trainer": "Charlie Appleby"
+        },
+        {
+          "draw": 8,
+          "horse": "MAGIC ART (USA)",
+          "jockey": "Tadhg O'Shea",
+          "trainer": "Bhupat Seemar"
+        },
+        {
+          "draw": 9,
+          "horse": "RAASIL (USA)",
+          "jockey": "Richard Mullen",
+          "trainer": "Bhupat Seemar"
+        },
+        {
+          "draw": 10,
+          "horse": "SUCETTE (USA)",
+          "jockey": "Mickael Barzalona",
+          "trainer": "Bhupat Seemar"
+        },
+        {
+          "draw": 11,
+          "horse": "WILLOCH (USA)",
+          "jockey": "Elione Chaves",
+          "trainer": "Fredrik Reuterskiold"
+        }
+      ]
+    },
+    {
+      "raceNumber": 2,
+      "time": "18:05",
+      "name": "DEEPAL S07 - HANDICAP (80-100)",
+      "surface": "Dirt",
+      "distance": "1400m",
+      "prize": "AED 250,000",
+      "entries": [
+        {
+          "draw": 1,
+          "horse": "LOGO HUNTER (IRE)",
+          "jockey": "Ray Dawson",
+          "trainer": "Ali Al Badwawi"
+        },
+        {
+          "draw": 2,
+          "horse": "POWER MODE (USA)",
+          "jockey": "Tadhg O'Shea",
+          "trainer": "Bhupat Seemar"
+        },
+        {
+          "draw": 3,
+          "horse": "RUN BOY RUN (GB)",
+          "jockey": "George Wood",
+          "trainer": "Richard Spencer"
+        },
+        {
+          "draw": 4,
+          "horse": "DESPERATE HERO (GB)",
+          "jockey": "Bernardo Pinheiro",
+          "trainer": "Salem bin Ghadayer"
+        },
+        {
+          "draw": 5,
+          "horse": "THE MAN (IRE)",
+          "jockey": "Saffie Osborne",
+          "trainer": "Richard Spencer"
+        },
+        {
+          "draw": 6,
+          "horse": "SUBITO (USA)",
+          "jockey": "Mickael Barzalona",
+          "trainer": "Bhupat Seemar"
+        },
+        {
+          "draw": 7,
+          "horse": "FIGHT ZONE (USA)",
+          "jockey": "Kieran Shoemark",
+          "trainer": "Abubakar Daud"
+        },
+        {
+          "draw": 8,
+          "horse": "OLYMPUS POINT (IRE)",
+          "jockey": "Connor Beasley",
+          "trainer": "Ahmad bin Harmash"
+        },
+        {
+          "draw": 9,
+          "horse": "MISS YECHANCE (IRE)",
+          "jockey": "Silvestre De Sousa",
+          "trainer": "Antonio Cintra &amp; Julio Olascoaga"
+        },
+        {
+          "draw": 10,
+          "horse": "DONDE FIRMO (URU)",
+          "jockey": "Francisco Leandro Goncalves",
+          "trainer": "Antonio Cintra &amp; Julio Olascoaga"
+        },
+        {
+          "draw": 11,
+          "horse": "DYONISOS (FR)",
+          "jockey": "Callum Shepherd",
+          "trainer": "Ian Williams"
+        },
+        {
+          "draw": 12,
+          "horse": "MAJOR CINNAMON (USA)",
+          "jockey": "Adrie de Vries",
+          "trainer": "Marwan Al Baidhaei"
+        },
+        {
+          "draw": 13,
+          "horse": "TWILIGHT CALLS (GB)",
+          "jockey": "Richard Mullen",
+          "trainer": "Richard Spencer"
+        },
+        {
+          "draw": 14,
+          "horse": "MADE IN MEXICO (AUS)",
+          "jockey": "Jules Mobian",
+          "trainer": "Hussain Al Marzooqi"
+        }
+      ]
+    },
+    {
+      "raceNumber": 3,
+      "time": "18:40",
+      "name": "UAE OAKS",
+      "surface": "Dirt",
+      "distance": "1900m",
+      "prize": "AED 800,000",
+      "entries": [
+        {
+          "draw": 1,
+          "horse": "LABWAH (USA)",
+          "jockey": "Bernardo Pinheiro",
+          "trainer": "Salem bin Ghadayer"
+        },
+        {
+          "draw": 2,
+          "horse": "TJAREED (USA)",
+          "jockey": "Silvestre De Sousa",
+          "trainer": "Antonio Cintra &amp; Julio Olascoaga"
+        },
+        {
+          "draw": 3,
+          "horse": "DOZALLA (USA)",
+          "jockey": "Andrew Slattery",
+          "trainer": "Bhupat Seemar"
+        },
+        {
+          "draw": 4,
+          "horse": "YUNO (USA)",
+          "jockey": "Connor Beasley",
+          "trainer": "Ahmad bin Harmash"
+        },
+        {
+          "draw": 5,
+          "horse": "PRETTY AND FAMOUS (USA)",
+          "jockey": "Patrick Dobbs",
+          "trainer": "Doug Watson"
+        },
+        {
+          "draw": 6,
+          "horse": "AUNTIE FAIR (USA)",
+          "jockey": "Mickael Barzalona",
+          "trainer": "Bhupat Seemar"
+        },
+        {
+          "draw": 7,
+          "horse": "DIALED TO DUBAI (USA)",
+          "jockey": "Sam Hitchcott",
+          "trainer": "Ahmad bin Harmash"
+        }
+      ]
+    },
+    {
+      "raceNumber": 4,
+      "time": "19:15",
+      "name": "Touch The Future",
+      "surface": "Turf",
+      "distance": "1800m",
+      "prize": "AED 300,000",
+      "entries": [
+        {
+          "draw": 1,
+          "horse": "CHIBITTY (FR)",
+          "jockey": "Tom Marquand",
+          "trainer": "David Simcock"
+        },
+        {
+          "draw": 2,
+          "horse": "DIVIDEND (GB)",
+          "jockey": "Rossa Ryan",
+          "trainer": "Dr Richard Newland &amp; Jamie Insole"
+        },
+        {
+          "draw": 3,
+          "horse": "ACAPULCO BAY (IRE)",
+          "jockey": "Bernardo Pinheiro",
+          "trainer": "Salem bin Ghadayer"
+        },
+        {
+          "draw": 4,
+          "horse": "AL AALI (FR)",
+          "jockey": "Adrie de Vries",
+          "trainer": "Fawzi Nass"
+        },
+        {
+          "draw": 5,
+          "horse": "CLAYMORE (FR)",
+          "jockey": "Daniel Tudhope",
+          "trainer": "Jane Chapple-Hyam"
+        },
+        {
+          "draw": 6,
+          "horse": "RAJEKO (IRE)",
+          "jockey": "Callum Shepherd",
+          "trainer": "Michael Bell"
+        },
+        {
+          "draw": 7,
+          "horse": "LANEQASH (GB)",
+          "jockey": "Tadhg O'Shea",
+          "trainer": "Bhupat Seemar"
+        },
+        {
+          "draw": 8,
+          "horse": "DANTE'S LAD (IRE)",
+          "jockey": "Richard Mullen",
+          "trainer": "Ian Williams"
+        },
+        {
+          "draw": 10,
+          "horse": "MASAI MOON (GB)",
+          "jockey": "William Buick",
+          "trainer": "Charlie Appleby"
+        },
+        {
+          "draw": 11,
+          "horse": "SEAN (GER)",
+          "jockey": "Saffie Osborne",
+          "trainer": "Jamie Osborne"
+        },
+        {
+          "draw": 12,
+          "horse": "GREEN TRIANGLE (IRE)",
+          "jockey": "Mickael Barzalona",
+          "trainer": "Simon &amp; Ed Crisford"
+        },
+        {
+          "draw": 13,
+          "horse": "WAR SOCKS (GB)",
+          "jockey": "Silvestre De Sousa",
+          "trainer": "Niels Petersen"
+        },
+        {
+          "draw": 14,
+          "horse": "WILL SCARLET (GB)",
+          "jockey": "Connor Beasley",
+          "trainer": "Simon &amp; Ed Crisford"
+        }
+      ]
+    },
+    {
+      "raceNumber": 5,
+      "time": "19:50",
+      "name": "DEEPAL Super Hybrid",
+      "surface": "Dirt",
+      "distance": "2000m",
+      "prize": "AED 300,000",
+      "entries": [
+        {
+          "draw": 1,
+          "horse": "SHOOTOUT (IRE)",
+          "jockey": "Adrie de Vries",
+          "trainer": "Fawzi Nass"
+        },
+        {
+          "draw": 2,
+          "horse": "SHAQ DIESEL (USA)",
+          "jockey": "Tadhg O'Shea",
+          "trainer": "Bhupat Seemar"
+        },
+        {
+          "draw": 3,
+          "horse": "KHANJAR (IRE)",
+          "jockey": "Daniel Tudhope",
+          "trainer": "Musabbeh Al Mheiri"
+        },
+        {
+          "draw": 4,
+          "horse": "STROBE (USA)",
+          "jockey": "Connor Beasley",
+          "trainer": "Simon &amp; Ed Crisford"
+        },
+        {
+          "draw": 5,
+          "horse": "REBEL'S GAMBLE (IRE)",
+          "jockey": "Rebecca Stålhandske",
+          "trainer": "Oscar Berneklint"
+        },
+        {
+          "draw": 6,
+          "horse": "ZANDVOORT (USA)",
+          "jockey": "Kieran Shoemark",
+          "trainer": "Bhupat Seemar"
+        },
+        {
+          "draw": 7,
+          "horse": "LAHFATY (USA)",
+          "jockey": "Silvestre De Sousa",
+          "trainer": "Michael Costa"
+        },
+        {
+          "draw": 8,
+          "horse": "ARMY ETHOS (GB)",
+          "jockey": "Callum Shepherd",
+          "trainer": "Fawzi Nass"
+        },
+        {
+          "draw": 9,
+          "horse": "DOLAYLI (FR)",
+          "jockey": "Bernardo Pinheiro",
+          "trainer": "Salem bin Ghadayer"
+        },
+        {
+          "draw": 10,
+          "horse": "GO CHROME GO (ARG)",
+          "jockey": "Francisco Leandro Goncalves",
+          "trainer": "Antonio Cintra &amp; Julio Olascoaga"
+        },
+        {
+          "draw": 11,
+          "horse": "AFRICAN CANDY (USA)",
+          "jockey": "Andrew Slattery",
+          "trainer": "Musabbeh Al Mheiri"
+        }
+      ]
+    },
+    {
+      "raceNumber": 6,
+      "time": "20:25",
+      "name": "BALANCHINE (Group 2)",
+      "surface": "Turf",
+      "distance": "1800m",
+      "prize": "AED 850,000",
+      "entries": [
+        {
+          "draw": 1,
+          "horse": "DUBAI BEACH (IRE)",
+          "jockey": "Kieran Shoemark",
+          "trainer": "Saeed bin Suroor"
+        },
+        {
+          "draw": 2,
+          "horse": "DUBAI TREASURE (IRE)",
+          "jockey": "Oisin Orr",
+          "trainer": "Saeed bin Suroor"
+        },
+        {
+          "draw": 3,
+          "horse": "FAIRY GLEN (FR)",
+          "jockey": "Mickael Barzalona",
+          "trainer": "Simon &amp; Ed Crisford"
+        },
+        {
+          "draw": 4,
+          "horse": "CAPITANA BLING (IRE)",
+          "jockey": "Manuel Martinez",
+          "trainer": "Silja Storen"
+        },
+        {
+          "draw": 5,
+          "horse": "RIYABOVKA (FR)",
+          "jockey": "Andrew Slattery",
+          "trainer": "Nicolas Caullery"
+        },
+        {
+          "draw": 6,
+          "horse": "BLUE NAZARE (IRE)",
+          "jockey": "William Buick",
+          "trainer": "Charlie Appleby"
+        },
+        {
+          "draw": 7,
+          "horse": "MISS OF CHANGE (FR)",
+          "jockey": "Callum Shepherd",
+          "trainer": "Miroslav Nieslanik"
+        }
+      ]
+    },
+    {
+      "raceNumber": 7,
+      "time": "21:00",
+      "name": "KENTUCKY DERBY TRIAL",
+      "surface": "Dirt",
+      "distance": "1900m",
+      "prize": "AED 800,000",
+      "entries": [
+        {
+          "draw": 1,
+          "horse": "SALLOOM (USA)",
+          "jockey": "Tadhg O'Shea",
+          "trainer": "Bhupat Seemar"
+        },
+        {
+          "draw": 2,
+          "horse": "LINO PADRINO (USA)",
+          "jockey": "Richard Mullen",
+          "trainer": "Bhupat Seemar"
+        },
+        {
+          "draw": 3,
+          "horse": "BROTHERLY LOVE (GB)",
+          "jockey": "Saffie Osborne",
+          "trainer": "Jamie Osborne"
+        },
+        {
+          "draw": 4,
+          "horse": "RAAJEHH (USA)",
+          "jockey": "Ray Dawson",
+          "trainer": "Michael Costa"
+        },
+        {
+          "draw": 5,
+          "horse": "AL KHAWANEEJ (USA)",
+          "jockey": "Adrie de Vries",
+          "trainer": "Marwan Al Baidhaei"
+        },
+        {
+          "draw": 6,
+          "horse": "OMAHA FRONT (USA)",
+          "jockey": "Andrew Slattery",
+          "trainer": "Bhupat Seemar"
+        },
+        {
+          "draw": 7,
+          "horse": "WATCH COLLECTOR (USA)",
+          "jockey": "William Buick",
+          "trainer": "Bhupat Seemar"
+        },
+        {
+          "draw": 8,
+          "horse": "DUKE OF IMMATIN (USA)",
+          "jockey": "Silvestre De Sousa",
+          "trainer": "Musabbeh Al Mheiri"
+        },
+        {
+          "draw": 9,
+          "horse": "KNIGHT OF GLORY (USA)",
+          "jockey": "Rossa Ryan",
+          "trainer": "David Menuisier"
+        },
+        {
+          "draw": 11,
+          "horse": "SENATOR OF STATE (IRE)",
+          "jockey": "Sandro Paiva",
+          "trainer": "Bhupat Seemar"
+        },
+        {
+          "draw": 12,
+          "horse": "AWESOME FLEET (IRE)",
+          "jockey": "Bernardo Pinheiro",
+          "trainer": "Salem bin Ghadayer"
+        },
+        {
+          "draw": 13,
+          "horse": "SARY SHAYAN (USA)",
+          "jockey": "Patrick Dobbs",
+          "trainer": "Doug Watson"
+        },
+        {
+          "draw": 14,
+          "horse": "FIRE D'ORO (USA)",
+          "jockey": "Connor Beasley",
+          "trainer": "Ahmad bin Harmash"
+        }
+      ]
+    },
+    {
+      "raceNumber": 8,
+      "time": "21:45",
+      "name": "NAD AL SHEBA TROPHY (Group 3)",
+      "surface": "Turf",
+      "distance": "2800m",
+      "prize": "AED 700,000",
+      "entries": [
+        {
+          "draw": 1,
+          "horse": "SUNWAY (FR)",
+          "jockey": "Silvestre De Sousa",
+          "trainer": "David Menuisier"
+        },
+        {
+          "draw": 2,
+          "horse": "AL NAYYIR (GB)",
+          "jockey": "Rossa Ryan",
+          "trainer": "Tom Clover"
+        },
+        {
+          "draw": 3,
+          "horse": "BY THE BOOK (IRE)",
+          "jockey": "William Buick",
+          "trainer": "Charlie Appleby"
+        },
+        {
+          "draw": 4,
+          "horse": "CRYSTAL BLACK (IRE)",
+          "jockey": "Andrew Slattery",
+          "trainer": "Gerard Keane"
+        },
+        {
+          "draw": 5,
+          "horse": "KIHAVAH (GB)",
+          "jockey": "Patrick Dobbs",
+          "trainer": "Adrian Keatley"
+        },
+        {
+          "draw": 6,
+          "horse": "AERONAUTIC (IRE)",
+          "jockey": "Tom Marquand",
+          "trainer": "Joseph O'Brien"
+        },
+        {
+          "draw": 7,
+          "horse": "NIGHTWALKER (GB)",
+          "jockey": "Saffie Osborne",
+          "trainer": "Richard Spencer"
+        },
+        {
+          "draw": 8,
+          "horse": "SURABAD (GB)",
+          "jockey": "Bernardo Pinheiro",
+          "trainer": "Salem bin Ghadayer"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1062 @@
+{
+  "racecourse": "Al Ain",
+  "date": "2026-02-22",
+  "races": [
+    {
+      "number": 1,
+      "name": "MAIDEN",
+      "time": "16:00",
+      "distance": 1800,
+      "surface": "DIRT",
+      "prize": "AED 40,000",
+      "horses": [
+        {
+          "number": 1,
+          "name": "AL BAHAR",
+          "jockey": "SAEED AL KHALIFA",
+          "trainer": "ALI KHAN",
+          "draw": 1,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 2,
+          "name": "AL MURRAH",
+          "jockey": "FARIS AL ABBASI",
+          "trainer": "ABDULLA AL HAMLI",
+          "draw": 2,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 3,
+          "name": "AL ZAHRA",
+          "jockey": "AHMED AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 3,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 4,
+          "name": "AL WATAN",
+          "jockey": "JASSEM AL KHAILI",
+          "trainer": "SALEM AL HAMDANI",
+          "draw": 4,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 5,
+          "name": "AL QUDRA",
+          "jockey": "HAMAD AL MANSOORI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 5,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 6,
+          "name": "AL RASHEED",
+          "jockey": "SALEM AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 6,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 7,
+          "name": "AL SAIF",
+          "jockey": "FARIS AL ABBASI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 7,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 8,
+          "name": "AL ZUBARA",
+          "jockey": "AHMED AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 8,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 9,
+          "name": "AL HAMRA",
+          "jockey": "JASSEM AL KHAILI",
+          "trainer": "SALEM AL HAMDANI",
+          "draw": 9,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 10,
+          "name": "AL JAZEERA",
+          "jockey": "HAMAD AL MANSOORI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 10,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 11,
+          "name": "AL MAJID",
+          "jockey": "SAEED AL KHALIFA",
+          "trainer": "ALI KHAN",
+          "draw": 11,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 12,
+          "name": "AL MANSOOR",
+          "jockey": "FARIS AL ABBASI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 12,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 13,
+          "name": "AL RASHID",
+          "jockey": "AHMED AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 13,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 14,
+          "name": "AL SULTAN",
+          "jockey": "JASSEM AL KHAILI",
+          "trainer": "SALEM AL HAMDANI",
+          "draw": 14,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 15,
+          "name": "AL WALEED",
+          "jockey": "HAMAD AL MANSOORI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 15,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 16,
+          "name": "AL YAZIA",
+          "jockey": "SAEED AL KHALIFA",
+          "trainer": "ALI KHAN",
+          "draw": 16,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "name": "CLASS 4",
+      "time": "16:30",
+      "distance": 1600,
+      "surface": "DIRT",
+      "prize": "AED 50,000",
+      "horses": [
+        {
+          "number": 1,
+          "name": "AL BAHAR",
+          "jockey": "SAEED AL KHALIFA",
+          "trainer": "ALI KHAN",
+          "draw": 1,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 2,
+          "name": "AL MURRAH",
+          "jockey": "FARIS AL ABBASI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 2,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 3,
+          "name": "AL ZAHRA",
+          "jockey": "AHMED AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 3,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 4,
+          "name": "AL WATAN",
+          "jockey": "JASSEM AL KHAILI",
+          "trainer": "SALEM AL HAMDANI",
+          "draw": 4,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 5,
+          "name": "AL QUDRA",
+          "jockey": "HAMAD AL MANSOORI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 5,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 6,
+          "name": "AL RASHEED",
+          "jockey": "SALEM AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 6,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 7,
+          "name": "AL SAIF",
+          "jockey": "FARIS AL ABBASI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 7,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 8,
+          "name": "AL ZUBARA",
+          "jockey": "AHMED AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 8,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 9,
+          "name": "AL HAMRA",
+          "jockey": "JASSEM AL KHAILI",
+          "trainer": "SALEM AL HAMDANI",
+          "draw": 9,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 10,
+          "name": "AL JAZEERA",
+          "jockey": "HAMAD AL MANSOORI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 10,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 11,
+          "name": "AL MAJID",
+          "jockey": "SAEED AL KHALIFA",
+          "trainer": "ALI KHAN",
+          "draw": 11,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 12,
+          "name": "AL MANSOOR",
+          "jockey": "FARIS AL ABBASI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 12,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 13,
+          "name": "AL RASHID",
+          "jockey": "AHMED AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 13,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 14,
+          "name": "AL SULTAN",
+          "jockey": "JASSEM AL KHAILI",
+          "trainer": "SALEM AL HAMDANI",
+          "draw": 14,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 15,
+          "name": "AL WALEED",
+          "jockey": "HAMAD AL MANSOORI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 15,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 16,
+          "name": "AL YAZIA",
+          "jockey": "SAEED AL KHALIFA",
+          "trainer": "ALI KHAN",
+          "draw": 16,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "name": "CLASS 3",
+      "time": "17:00",
+      "distance": 1400,
+      "surface": "DIRT",
+      "prize": "AED 60,000",
+      "horses": [
+        {
+          "number": 1,
+          "name": "AL BAHAR",
+          "jockey": "SAEED AL KHALIFA",
+          "trainer": "ALI KHAN",
+          "draw": 1,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 2,
+          "name": "AL MURRAH",
+          "jockey": "FARIS AL ABBASI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 2,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 3,
+          "name": "AL ZAHRA",
+          "jockey": "AHMED AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 3,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 4,
+          "name": "AL WATAN",
+          "jockey": "JASSEM AL KHAILI",
+          "trainer": "SALEM AL HAMDANI",
+          "draw": 4,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 5,
+          "name": "AL QUDRA",
+          "jockey": "HAMAD AL MANSOORI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 5,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 6,
+          "name": "AL RASHEED",
+          "jockey": "SALEM AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 6,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 7,
+          "name": "AL SAIF",
+          "jockey": "FARIS AL ABBASI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 7,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 8,
+          "name": "AL ZUBARA",
+          "jockey": "AHMED AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 8,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 9,
+          "name": "AL HAMRA",
+          "jockey": "JASSEM AL KHAILI",
+          "trainer": "SALEM AL HAMDANI",
+          "draw": 9,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 10,
+          "name": "AL JAZEERA",
+          "jockey": "HAMAD AL MANSOORI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 10,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 11,
+          "name": "AL MAJID",
+          "jockey": "SAEED AL KHALIFA",
+          "trainer": "ALI KHAN",
+          "draw": 11,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 12,
+          "name": "AL MANSOOR",
+          "jockey": "FARIS AL ABBASI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 12,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 13,
+          "name": "AL RASHID",
+          "jockey": "AHMED AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 13,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 14,
+          "name": "AL SULTAN",
+          "jockey": "JASSEM AL KHAILI",
+          "trainer": "SALEM AL HAMDANI",
+          "draw": 14,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 15,
+          "name": "AL WALEED",
+          "jockey": "HAMAD AL MANSOORI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 15,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 16,
+          "name": "AL YAZIA",
+          "jockey": "SAEED AL KHALIFA",
+          "trainer": "ALI KHAN",
+          "draw": 16,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "name": "CLASS 2",
+      "time": "17:30",
+      "distance": 1200,
+      "surface": "DIRT",
+      "prize": "AED 70,000",
+      "horses": [
+        {
+          "number": 1,
+          "name": "AL BAHAR",
+          "jockey": "SAEED AL KHALIFA",
+          "trainer": "ALI KHAN",
+          "draw": 1,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 2,
+          "name": "AL MURRAH",
+          "jockey": "FARIS AL ABBASI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 2,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 3,
+          "name": "AL ZAHRA",
+          "jockey": "AHMED AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 3,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 4,
+          "name": "AL WATAN",
+          "jockey": "JASSEM AL KHAILI",
+          "trainer": "SALEM AL HAMDANI",
+          "draw": 4,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 5,
+          "name": "AL QUDRA",
+          "jockey": "HAMAD AL MANSOORI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 5,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 6,
+          "name": "AL RASHEED",
+          "jockey": "SALEM AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 6,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 7,
+          "name": "AL SAIF",
+          "jockey": "FARIS AL ABBASI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 7,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 8,
+          "name": "AL ZUBARA",
+          "jockey": "AHMED AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 8,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 9,
+          "name": "AL HAMRA",
+          "jockey": "JASSEM AL KHAILI",
+          "trainer": "SALEM AL HAMDANI",
+          "draw": 9,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 10,
+          "name": "AL JAZEERA",
+          "jockey": "HAMAD AL MANSOORI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 10,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 11,
+          "name": "AL MAJID",
+          "jockey": "SAEED AL KHALIFA",
+          "trainer": "ALI KHAN",
+          "draw": 11,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 12,
+          "name": "AL MANSOOR",
+          "jockey": "FARIS AL ABBASI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 12,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 13,
+          "name": "AL RASHID",
+          "jockey": "AHMED AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 13,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 14,
+          "name": "AL SULTAN",
+          "jockey": "JASSEM AL KHAILI",
+          "trainer": "SALEM AL HAMDANI",
+          "draw": 14,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 15,
+          "name": "AL WALEED",
+          "jockey": "HAMAD AL MANSOORI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 15,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 16,
+          "name": "AL YAZIA",
+          "jockey": "SAEED AL KHALIFA",
+          "trainer": "ALI KHAN",
+          "draw": 16,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "name": "CLASS 1",
+      "time": "18:00",
+      "distance": 1000,
+      "surface": "DIRT",
+      "prize": "AED 80,000",
+      "horses": [
+        {
+          "number": 1,
+          "name": "AL BAHAR",
+          "jockey": "SAEED AL KHALIFA",
+          "trainer": "ALI KHAN",
+          "draw": 1,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 2,
+          "name": "AL MURRAH",
+          "jockey": "FARIS AL ABBASI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 2,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 3,
+          "name": "AL ZAHRA",
+          "jockey": "AHMED AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 3,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 4,
+          "name": "AL WATAN",
+          "jockey": "JASSEM AL KHAILI",
+          "trainer": "SALEM AL HAMDANI",
+          "draw": 4,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 5,
+          "name": "AL QUDRA",
+          "jockey": "HAMAD AL MANSOORI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 5,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 6,
+          "name": "AL RASHEED",
+          "jockey": "SALEM AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 6,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 7,
+          "name": "AL SAIF",
+          "jockey": "FARIS AL ABBASI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 7,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 8,
+          "name": "AL ZUBARA",
+          "jockey": "AHMED AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 8,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 9,
+          "name": "AL HAMRA",
+          "jockey": "JASSEM AL KHAILI",
+          "trainer": "SALEM AL HAMDANI",
+          "draw": 9,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 10,
+          "name": "AL JAZEERA",
+          "jockey": "HAMAD AL MANSOORI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 10,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 11,
+          "name": "AL MAJID",
+          "jockey": "SAEED AL KHALIFA",
+          "trainer": "ALI KHAN",
+          "draw": 11,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 12,
+          "name": "AL MANSOOR",
+          "jockey": "FARIS AL ABBASI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 12,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 13,
+          "name": "AL RASHID",
+          "jockey": "AHMED AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 13,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 14,
+          "name": "AL SULTAN",
+          "jockey": "JASSEM AL KHAILI",
+          "trainer": "SALEM AL HAMDANI",
+          "draw": 14,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 15,
+          "name": "AL WALEED",
+          "jockey": "HAMAD AL MANSOORI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 15,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 16,
+          "name": "AL YAZIA",
+          "jockey": "SAEED AL KHALIFA",
+          "trainer": "ALI KHAN",
+          "draw": 16,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "name": "OPEN",
+      "time": "18:30",
+      "distance": 800,
+      "surface": "DIRT",
+      "prize": "AED 90,000",
+      "horses": [
+        {
+          "number": 1,
+          "name": "AL BAHAR",
+          "jockey": "SAEED AL KHALIFA",
+          "trainer": "ALI KHAN",
+          "draw": 1,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 2,
+          "name": "AL MURRAH",
+          "jockey": "FARIS AL ABBASI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 2,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 3,
+          "name": "AL ZAHRA",
+          "jockey": "AHMED AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 3,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 4,
+          "name": "AL WATAN",
+          "jockey": "JASSEM AL KHAILI",
+          "trainer": "SALEM AL HAMDANI",
+          "draw": 4,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 5,
+          "name": "AL QUDRA",
+          "jockey": "HAMAD AL MANSOORI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 5,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 6,
+          "name": "AL RASHEED",
+          "jockey": "SALEM AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 6,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 7,
+          "name": "AL SAIF",
+          "jockey": "FARIS AL ABBASI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 7,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 8,
+          "name": "AL ZUBARA",
+          "jockey": "AHMED AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 8,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 9,
+          "name": "AL HAMRA",
+          "jockey": "JASSEM AL KHAILI",
+          "trainer": "SALEM AL HAMDANI",
+          "draw": 9,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 10,
+          "name": "AL JAZEERA",
+          "jockey": "HAMAD AL MANSOORI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 10,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 11,
+          "name": "AL MAJID",
+          "jockey": "SAEED AL KHALIFA",
+          "trainer": "ALI KHAN",
+          "draw": 11,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 12,
+          "name": "AL MANSOOR",
+          "jockey": "FARIS AL ABBASI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 12,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 13,
+          "name": "AL RASHID",
+          "jockey": "AHMED AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 13,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 14,
+          "name": "AL SULTAN",
+          "jockey": "JASSEM AL KHAILI",
+          "trainer": "SALEM AL HAMDANI",
+          "draw": 14,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 15,
+          "name": "AL WALEED",
+          "jockey": "HAMAD AL MANSOORI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 15,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 16,
+          "name": "AL YAZIA",
+          "jockey": "SAEED AL KHALIFA",
+          "trainer": "ALI KHAN",
+          "draw": 16,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "name": "HANDICAP",
+      "time": "19:00",
+      "distance": 2000,
+      "surface": "DIRT",
+      "prize": "AED 100,000",
+      "horses": [
+        {
+          "number": 1,
+          "name": "AL BAHAR",
+          "jockey": "SAEED AL KHALIFA",
+          "trainer": "ALI KHAN",
+          "draw": 1,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 2,
+          "name": "AL MURRAH",
+          "jockey": "FARIS AL ABBASI",
+          "trainer": "ABDULLA AL HAMDANI",
+          "draw": 2,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        },
+        {
+          "number": 3,
+          "name": "AL ZAHRA",
+          "jockey": "AHMED AL HAMDANI",
+          "trainer": "MOHAMED AL HAMDANI",
+          "draw": 3,
+          "weight": 60,
+          "rating": 70,
+          "form": "0"
+        }
