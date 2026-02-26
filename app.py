@@ -1,313 +1,227 @@
 """
 HorseMaster AI - نظام ترشيحات سباقات الخيل الذكية
-Smart Horse Racing Predictions System
-Version: 2.0
-Author: Elghali AI Solutions
+Version: 3.0 - Ultra Fast
 """
 
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 import os
-import json
-from datetime import datetime
 import random
-import math
+from datetime import datetime
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', template_folder='templates')
 CORS(app)
 
-# ===========================================
-# بيانات المضامير
-# ===========================================
+# المضامير المتاحة
 RACETRACKS = {
     "UAE": [
-        {"id": "meydan", "name": "Meydan Racecourse", "city": "Dubai", "type": "Turf/Dirt"},
-        {"id": "jebel_ali", "name": "Jebel Ali Racecourse", "city": "Dubai", "type": "Dirt"},
-        {"id": "al_ain", "name": "Al Ain Racecourse", "city": "Al Ain", "type": "Dirt"},
-        {"id": "abu_dhabi", "name": "Abu Dhabi Equestrian Club", "city": "Abu Dhabi", "type": "Turf"},
-        {"id": "sharjah", "name": "Sharjah Equestrian", "city": "Sharjah", "type": "Dirt"}
+        {"id": "meydan", "name": "Meydan", "city": "Dubai"},
+        {"id": "jebel_ali", "name": "Jebel Ali", "city": "Dubai"},
+        {"id": "al_ain", "name": "Al Ain", "city": "Al Ain"},
+        {"id": "abu_dhabi", "name": "Abu Dhabi", "city": "Abu Dhabi"},
+        {"id": "sharjah", "name": "Sharjah", "city": "Sharjah"}
     ],
     "UK": [
-        {"id": "wolverhampton", "name": "Wolverhampton", "city": "Wolverhampton", "type": "AW"},
-        {"id": "kempton", "name": "Kempton Park", "city": "Sunbury", "type": "AW"},
-        {"id": "lingfield", "name": "Lingfield Park", "city": "Lingfield", "type": "AW/Turf"},
-        {"id": "newcastle", "name": "Newcastle", "city": "Newcastle", "type": "AW/Turf"},
-        {"id": "southwell", "name": "Southwell", "city": "Southwell", "type": "AW"}
-    ],
-    "SAUDI_ARABIA": [
-        {"id": "king_abdulaziz", "name": "King Abdulaziz Racecourse", "city": "Riyadh", "type": "Dirt"}
-    ],
-    "QATAR": [
-        {"id": "al_rayyan", "name": "Al Rayyan Racecourse", "city": "Doha", "type": "Turf"}
+        {"id": "wolverhampton", "name": "Wolverhampton", "city": "Wolverhampton"},
+        {"id": "kempton", "name": "Kempton", "city": "Kempton"},
+        {"id": "lingfield", "name": "Lingfield", "city": "Lingfield"},
+        {"id": "newcastle", "name": "Newcastle", "city": "Newcastle"},
+        {"id": "southwell", "name": "Southwell", "city": "Southwell"}
     ]
 }
 
-# أسماء الخيول العربية والإنجليزية
-HORSE_NAMES = [
+HORSES = [
     "DREAM OF TUSCANY", "FORAAT AL LEITH", "LAMBORGHINI BF", "MEYDAAN",
     "AREEJ AL LAZAZ", "RAGHIBAH", "TAWAF", "YAQOOT AL LAZAZ",
-    "RB MOTHERLOAD", "AL MURTAJEL", "THUNDER STRIKE", "GOLDEN ARROW",
-    "SPEED DEMON", "NIGHT RIDER", "STORM CHASER", "ROYAL CROWN",
-    "DIAMOND KING", "SILVER FLASH", "PHOENIX RISING", "DESERT STORM",
-    "AL REEM", "AL MOUGHATHA", "EMIR'S PRIDE", "SANDS OF TIME"
+    "RB MOTHERLOAD", "AL MURTAJEL", "THUNDER STRIKE", "GOLDEN ARROW"
 ]
 
-JOCKEYS = [
-    "W. Buick", "L. Dettori", "R. Moore", "C. Soumillon", "P. Cosgrave",
-    "A. de Vries", "T. O'Shea", "S. Paiva", "D. O'Neill", "B. Murgia",
-    "J. Smith", "M. Johnson", "H. Doyle", "R. Mullen", "A. Fresu"
-]
+JOCKEYS = ["W. Buick", "L. Dettori", "R. Moore", "C. Soumillon", "P. Cosgrave"]
 
-TRAINERS = [
-    "C. Appleby", "S. bin Suroor", "D. Watson", "M. Al Mheiri",
-    "I. Al Rashdi", "A. O'Brien", "J. Gosden", "W. Haggas",
-    "K. Burke", "R. Varian", "J. Fanshawe", "M. Johnston"
-]
-
-
-def calculate_power_score(horse_data):
-    """
-    حساب نقاط القوة للحصان
-    Power Rating = (Form 30%) + (Speed 25%) + (Jockey 15%) + (Trainer 10%) + (Track History 20%)
-    """
-    form_score = horse_data.get('form_score', random.randint(50, 100))
-    speed_score = horse_data.get('speed_score', random.randint(50, 100))
-    jockey_score = horse_data.get('jockey_score', random.randint(50, 100))
-    trainer_score = horse_data.get('trainer_score', random.randint(50, 100))
-    track_score = horse_data.get('track_score', random.randint(50, 100))
-    
-    power_score = (
-        form_score * 0.30 +
-        speed_score * 0.25 +
-        jockey_score * 0.15 +
-        trainer_score * 0.10 +
-        track_score * 0.20
-    )
-    
-    return round(power_score, 1)
-
-
-def generate_horse_predictions(num_horses=10):
-    """توليد ترشيحات الخيول"""
+def generate_race():
+    """توليد سباق واحد"""
     horses = []
-    
-    for h in range(1, num_horses + 1):
-        form = "".join([random.choice(["1", "2", "3", "4", "0", "-"]) for _ in range(5)])
-        form_score = 80 - (form.count("0") * 10) - (form.count("-") * 5) + (form.count("1") * 15)
-        
-        horse_data = {
-            'form_score': form_score,
-            'speed_score': random.randint(55, 95),
-            'jockey_score': random.randint(50, 95),
-            'trainer_score': random.randint(50, 90),
-            'track_score': random.randint(45, 95)
-        }
-        
-        power_score = calculate_power_score(horse_data)
-        
-        horse = {
-            "number": h,
-            "name": random.choice(HORSE_NAMES),
-            "draw": random.randint(1, num_horses),
+    for i in range(1, 6):
+        horses.append({
+            "number": i,
+            "name": random.choice(HORSES),
             "jockey": random.choice(JOCKEYS),
-            "trainer": random.choice(TRAINERS),
-            "rating": random.randint(50, 100),
-            "power_score": power_score,
-            "win_probability": round(random.uniform(5, 35), 1),
-            "value_rating": "⭐" * (1 if power_score < 65 else 2 if power_score < 80 else 3),
-            "form": form,
-            "weight": random.randint(52, 62),
-            "odds": f"{random.randint(2, 20)}/{1}"
-        }
-        horses.append(horse)
-    
-    # ترتيب حسب نقاط القوة
-    horses.sort(key=lambda x: x["power_score"], reverse=True)
-    
-    # تحديث نسب الفوز
-    total_score = sum(h["power_score"] for h in horses)
-    for h in horses:
-        h["win_probability"] = round((h["power_score"] / total_score) * 100, 1)
-    
+            "draw": random.randint(1, 12),
+            "rating": 70 + random.randint(0, 25),
+            "powerScore": 75 + random.randint(0, 20) - i * 3,
+            "winProbability": max(5, 35 - i * 5),
+            "valueRating": "Excellent" if i == 1 else "Good" if i == 2 else "Fair"
+        })
     return horses
-
-
-def generate_race_predictions(country, track_id, date):
-    """توليد ترشيحات السباق"""
-    # البحث عن المضمار
-    track = None
-    for t in RACETRACKS.get(country, []):
-        if t["id"] == track_id:
-            track = t
-            break
-    
-    if not track:
-        track = RACETRACKS.get(country, [{}])[0]
-    
-    num_races = random.randint(5, 7)
-    races = []
-    
-    for r in range(1, num_races + 1):
-        num_horses = random.randint(8, 12)
-        horses = generate_horse_predictions(num_horses)
-        
-        race = {
-            "race_number": r,
-            "race_time": f"{13 + r}:{'00' if r % 2 == 0 else '30'}",
-            "race_name": f"Race {r}",
-            "distance": random.choice([1200, 1400, 1600, 1800, 2000, 2400]),
-            "surface": random.choice(["Turf", "Dirt", "Synthetic"]),
-            "going": random.choice(["Good", "Soft", "Firm", "Good to Firm"]),
-            "prize_money": f"${random.randint(20, 100)},000",
-            "predictions": horses[:5],  # أعلى 5 خيول
-            "top_pick": horses[0],
-            "value_pick": horses[2] if len(horses) > 2 else horses[1]
-        }
-        races.append(race)
-    
-    # NAP of the Day
-    nap_race = races[0]
-    nap_horse = nap_race["top_pick"]
-    
-    # Next Best
-    next_best_race = races[1] if len(races) > 1 else races[0]
-    next_best_horse = next_best_race["top_pick"]
-    
-    # Value Pick
-    value_race = races[2] if len(races) > 2 else races[0]
-    value_horse = value_race["value_pick"]
-    
-    return {
-        "success": True,
-        "generated_at": datetime.now().isoformat(),
-        "country": country,
-        "track": track,
-        "date": date,
-        "races": races,
-        "total_races": num_races,
-        "nap_of_the_day": {
-            "horse_name": nap_horse["name"],
-            "horse_number": nap_horse["number"],
-            "race": f"Race {nap_race['race_number']}",
-            "jockey": nap_horse["jockey"],
-            "trainer": nap_horse["trainer"],
-            "power_score": nap_horse["power_score"],
-            "win_probability": nap_horse["win_probability"],
-            "reason": f"أعلى نقاط قوة ({nap_horse['power_score']}) مع فورم ممتاز",
-            "confidence": "HIGH" if nap_horse["power_score"] > 80 else "MEDIUM"
-        },
-        "next_best": {
-            "horse_name": next_best_horse["name"],
-            "horse_number": next_best_horse["number"],
-            "race": f"Race {next_best_race['race_number']}",
-            "jockey": next_best_horse["jockey"],
-            "power_score": next_best_horse["power_score"],
-            "reason": "قيمة ممتازة مع احتمالات جيدة"
-        },
-        "value_pick": {
-            "horse_name": value_horse["name"],
-            "horse_number": value_horse["number"],
-            "race": f"Race {value_race['race_number']}",
-            "odds": value_horse["odds"],
-            "power_score": value_horse["power_score"],
-            "reason": "احتمالات عالية مع إمكانية مفاجأة"
-        },
-        "betting_strategy": {
-            "balanced": {
-                "description": "مراهنة متوازنة - مخاطر متوسطة",
-                "recommended_stake": "2-3% من رأس المال",
-                "target": nap_horse["name"]
-            },
-            "aggressive": {
-                "description": "مراهنة عدوانية - مخاطر عالية",
-                "recommended_stake": "5-10% من رأس المال",
-                "target": f"{nap_horse['name']} + {next_best_horse['name']} (Each Way)"
-            }
-        }
-    }
-
-
-# ===========================================
-# Routes
-# ===========================================
 
 @app.route('/')
 def index():
-    """الصفحة الرئيسية"""
-    return render_template('index.html')
+    return '''
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐎 HorseMaster AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Cairo', sans-serif; background: linear-gradient(135deg, #1a1a2e, #0f3460); min-height: 100vh; color: #fff; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { text-align: center; padding: 30px; background: rgba(255,255,255,0.05); border-radius: 15px; margin-bottom: 20px; }
+        .header h1 { font-size: 2rem; background: linear-gradient(90deg, #ffd700, #ff6b6b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-bottom: 20px; }
+        .control-group { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px; }
+        .control-group label { display: block; margin-bottom: 8px; color: #ffd700; font-size: 0.9rem; }
+        .control-group select, .control-group input { width: 100%; padding: 10px; border: 2px solid rgba(255,215,0,0.3); border-radius: 8px; background: rgba(0,0,0,0.3); color: #fff; font-family: inherit; }
+        .btn { width: 100%; padding: 15px; background: linear-gradient(90deg, #ffd700, #ff6b6b); border: none; border-radius: 10px; color: #000; font-size: 1.1rem; font-weight: 700; cursor: pointer; }
+        .btn:hover { opacity: 0.9; }
+        .results { display: none; margin-top: 20px; }
+        .results.active { display: block; }
+        .nap { background: linear-gradient(135deg, rgba(255,215,0,0.2), rgba(255,107,107,0.2)); padding: 20px; border-radius: 15px; margin-bottom: 20px; text-align: center; }
+        .nap h2 { color: #ffd700; margin-bottom: 15px; }
+        .nap .horse { font-size: 1.5rem; font-weight: 700; }
+        .race-card { background: rgba(255,255,255,0.05); border-radius: 10px; margin-bottom: 15px; overflow: hidden; }
+        .race-header { background: rgba(255,215,0,0.1); padding: 12px 15px; display: flex; justify-content: space-between; }
+        .race-header h3 { color: #ffd700; }
+        table { width: 100%; border-collapse: collapse; }
+        th { background: rgba(255,215,0,0.1); padding: 8px; text-align: right; color: #ffd700; font-size: 0.85rem; }
+        td { padding: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; }
+        tr:nth-child(1) td { background: rgba(255,215,0,0.1); }
+        .loading { text-align: center; padding: 30px; display: none; }
+        .spinner { width: 40px; height: 40px; border: 4px solid rgba(255,215,0,0.3); border-top-color: #ffd700; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 15px; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .footer { text-align: center; padding: 20px; color: #666; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐎 HorseMaster AI</h1>
+            <p>ترشيحات سباقات الخيل الذكية</p>
+        </div>
+        <div class="controls">
+            <div class="control-group">
+                <label>🌍 الدولة</label>
+                <select id="country" onchange="updateTracks()">
+                    <option value="UAE">الإمارات 🇦🇪</option>
+                    <option value="UK">بريطانيا 🇬🇧</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label>🏇 المضمار</label>
+                <select id="track"></select>
+            </div>
+            <div class="control-group">
+                <label>📅 التاريخ</label>
+                <input type="date" id="date">
+            </div>
+            <div class="control-group" style="display: flex; align-items: flex-end;">
+                <button class="btn" onclick="getPredictions()">🔍 تحليل</button>
+            </div>
+        </div>
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>جاري التحليل...</p>
+        </div>
+        <div id="results" class="results">
+            <div class="nap">
+                <h2>🏆 ترشيح اليوم</h2>
+                <div id="napHorse" class="horse">-</div>
+                <div id="napDetails" style="color: #888; margin-top: 10px;">-</div>
+            </div>
+            <div id="races"></div>
+        </div>
+        <div class="footer">
+            <p>© 2026 Elghali AI - HorseMaster AI v3.0</p>
+        </div>
+    </div>
+    <script>
+        const tracks = {
+            'UAE': [{id:'meydan',name:'Meydan'},{id:'jebel_ali',name:'Jebel Ali'},{id:'al_ain',name:'Al Ain'},{id:'abu_dhabi',name:'Abu Dhabi'},{id:'sharjah',name:'Sharjah'}],
+            'UK': [{id:'wolverhampton',name:'Wolverhampton'},{id:'kempton',name:'Kempton'},{id:'lingfield',name:'Lingfield'},{id:'newcastle',name:'Newcastle'},{id:'southwell',name:'Southwell'}]
+        };
+        document.getElementById('date').valueAsDate = new Date();
+        function updateTracks() {
+            const country = document.getElementById('country').value;
+            const trackSelect = document.getElementById('track');
+            trackSelect.innerHTML = tracks[country].map(t => '<option value="'+t.id+'">'+t.name+'</option>').join('');
+        }
+        updateTracks();
+        async function getPredictions() {
+            const country = document.getElementById('country').value;
+            const trackId = document.getElementById('track').value;
+            const date = document.getElementById('date').value;
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('results').classList.remove('active');
+            try {
+                const res = await fetch('/api/predict', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({country, track_id: trackId, date})
+                });
+                const data = await res.json();
+                document.getElementById('napHorse').textContent = data.nap.name;
+                document.getElementById('napDetails').textContent = data.nap.race + ' | ' + data.nap.jockey + ' | ' + data.nap.powerScore + ' نقطة';
+                document.getElementById('races').innerHTML = data.races.map(r => 
+                    '<div class="race-card"><div class="race-header"><h3>'+r.name+'</h3><span>'+r.time+'</span></div><table><thead><tr><th>#</th><th>الحصان</th><th>الفارس</th><th>القوة</th><th>%</th></tr></thead><tbody>' +
+                    r.predictions.map((h,i) => '<tr><td>'+(i+1)+'</td><td>'+h.name+'</td><td>'+h.jockey+'</td><td>'+h.powerScore+'</td><td>'+h.winProbability+'%</td></tr>').join('') +
+                    '</tbody></table></div>'
+                ).join('');
+                document.getElementById('results').classList.add('active');
+            } catch(e) {
+                alert('خطأ في الاتصال');
+            }
+            document.getElementById('loading').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+'''
 
+@app.route('/health')
+def health():
+    return jsonify({"status": "healthy", "version": "3.0", "time": datetime.now().isoformat()})
 
-@app.route('/api/tracks', methods=['GET'])
-def get_tracks():
-    """الحصول على قائمة المضامير"""
-    return jsonify({
-        "success": True,
-        "app_name": "HorseMaster AI",
-        "version": "2.0",
-        "tracks": RACETRACKS,
-        "message": "HorseMaster API v2.0 - Ready"
-    })
-
+@app.route('/api/tracks')
+def api_tracks():
+    return jsonify({"success": True, "tracks": RACETRACKS})
 
 @app.route('/api/predict', methods=['POST'])
-def get_predictions():
-    """الحصول على الترشيحات"""
+def predict():
     try:
         data = request.get_json() or {}
         country = data.get('country', 'UAE')
         track_id = data.get('track_id', 'meydan')
         date = data.get('date', datetime.now().strftime('%Y-%m-%d'))
         
-        predictions = generate_race_predictions(country, track_id, date)
-        return jsonify(predictions)
+        # توليد السباقات
+        races = []
+        for i in range(1, 6):
+            races.append({
+                "number": i,
+                "name": f"Race {i}",
+                "time": f"{13+i}:00",
+                "distance": [1200, 1400, 1600, 1800, 2000][i-1],
+                "surface": "Turf" if i % 2 == 0 else "Dirt",
+                "predictions": generate_race()
+            })
         
-    except Exception as e:
-        return jsonify({
-            "success": False,
-            "message": f"Error: {str(e)}"
-        }), 500
-
-
-@app.route('/api/predict/<country>/<track_id>', methods=['GET'])
-def get_predictions_simple(country, track_id):
-    """الحصول على الترشيحات - طريقة مبسطة"""
-    try:
-        date = request.args.get('date', datetime.now().strftime('%Y-%m-%d'))
-        predictions = generate_race_predictions(country, track_id, date)
-        return jsonify(predictions)
+        # NAP
+        nap = races[0]["predictions"][0]
+        nap["race"] = races[0]["name"]
         
-    except Exception as e:
         return jsonify({
-            "success": False,
-            "message": f"Error: {str(e)}"
-        }), 500
-
-
-@app.route('/health')
-def health():
-    """فحص صحة التطبيق"""
-    return jsonify({
-        "status": "healthy",
-        "app": "HorseMaster AI",
-        "version": "2.0",
-        "timestamp": datetime.now().isoformat()
-    })
-
-
-@app.route('/api/test')
-def test():
-    """اختبار API"""
-    return jsonify({
-        "success": True,
-        "message": "HorseMaster AI is running!",
-        "endpoints": [
-            "GET /api/tracks - قائمة المضامير",
-            "POST /api/predict - الحصول على ترشيحات",
-            "GET /api/predict/<country>/<track_id> - ترشيحات مبسطة",
-            "GET /health - فحص الصحة"
-        ]
-    })
-
+            "success": True,
+            "country": country,
+            "track_id": track_id,
+            "date": date,
+            "races": races,
+            "nap": nap,
+            "total_races": len(races)
+        })
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 500
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
