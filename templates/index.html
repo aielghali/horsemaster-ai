@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐎 HorseMaster AI - ترشيحات سباقات الخيل</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #ffd700, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .header p { color: #888; font-size: 1.1rem; margin-top: 10px; }
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .control-group {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .control-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: #ffd700;
+            font-weight: 600;
+        }
+        .control-group select, .control-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid rgba(255,215,0,0.3);
+            border-radius: 10px;
+            background: rgba(0,0,0,0.3);
+            color: #fff;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        .btn {
+            width: 100%;
+            padding: 15px 30px;
+            background: linear-gradient(90deg, #ffd700, #ff6b6b);
+            border: none;
+            border-radius: 10px;
+            color: #000;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .results { display: none; }
+        .results.active { display: block; }
+        .nap-section {
+            background: linear-gradient(135deg, rgba(255,215,0,0.2), rgba(255,107,107,0.2));
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            border: 2px solid rgba(255,215,0,0.3);
+        }
+        .nap-section h2 { color: #ffd700; margin-bottom: 20px; }
+        .nap-card {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .nap-item {
+            background: rgba(0,0,0,0.3);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .nap-item h3 { color: #ffd700; font-size: 0.9rem; margin-bottom: 10px; }
+        .nap-item .horse-name { font-size: 1.3rem; font-weight: 700; margin-bottom: 10px; }
+        .nap-item .details { color: #888; font-size: 0.9rem; }
+        .power-score {
+            display: inline-block;
+            padding: 5px 15px;
+            background: linear-gradient(90deg, #ffd700, #ff6b6b);
+            border-radius: 20px;
+            color: #000;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+        .races-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        .race-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .race-header {
+            background: linear-gradient(90deg, rgba(255,215,0,0.2), rgba(255,107,107,0.2));
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .race-header h3 { color: #ffd700; }
+        .race-header span { color: #888; }
+        .race-info {
+            padding: 15px 20px;
+            background: rgba(0,0,0,0.2);
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .race-info span { color: #888; font-size: 0.85rem; }
+        .predictions-table { width: 100%; border-collapse: collapse; }
+        .predictions-table th {
+            background: rgba(255,215,0,0.1);
+            padding: 10px;
+            text-align: right;
+            font-size: 0.85rem;
+            color: #ffd700;
+        }
+        .predictions-table td {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.9rem;
+        }
+        .predictions-table tr:nth-child(1) td { background: rgba(255,215,0,0.1); }
+        .predictions-table tr:nth-child(2) td { background: rgba(192,192,192,0.1); }
+        .predictions-table tr:nth-child(3) td { background: rgba(205,127,50,0.1); }
+        .loading { text-align: center; padding: 50px; }
+        .loading-spinner {
+            width: 50px; height: 50px;
+            border: 4px solid rgba(255,215,0,0.3);
+            border-top-color: #ffd700;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .strategy-section {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        .strategy-section h2 { color: #ffd700; margin-bottom: 20px; }
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .strategy-card {
+            background: rgba(0,0,0,0.3);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .strategy-card h3 { color: #4ade80; margin-bottom: 15px; }
+        .strategy-card.aggressive h3 { color: #f87171; }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.8rem; }
+            .nap-card, .races-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐎 HorseMaster AI</h1>
+            <p>نظام ترشيحات سباقات الخيل الذكية - Powered by Elghali AI Solutions</p>
+        </div>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label>🌍 الدولة</label>
+                <select id="country" onchange="updateTracks()">
+                    <option value="UAE">الإمارات 🇦🇪</option>
+                    <option value="UK">بريطانيا 🇬🇧</option>
+                    <option value="SAUDI_ARABIA">السعودية 🇸🇦</option>
+                    <option value="QATAR">قطر 🇶🇦</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label>🏇 المضمار</label>
+                <select id="track"></select>
+            </div>
+            <div class="control-group">
+                <label>📅 التاريخ</label>
+                <input type="date" id="raceDate">
+            </div>
+            <div class="control-group" style="display: flex; align-items: flex-end;">
+                <button class="btn" onclick="getPredictions()">🔍 احصل على الترشيحات</button>
+            </div>
+        </div>
+        
+        <div id="loading" class="loading" style="display: none;">
+            <div class="loading-spinner"></div>
+            <p>جاري تحليل السباقات...</p>
+        </div>
+        
+        <div id="results" class="results">
+            <div class="nap-section">
+                <h2>⭐ ترشيحات اليوم</h2>
+                <div class="nap-card">
+                    <div class="nap-item">
+                        <h3>🏆 NAP of the Day</h3>
+                        <div id="napHorse" class="horse-name">-</div>
+                        <div id="napDetails" class="details">-</div>
+                        <div id="napScore" class="power-score">-</div>
+                    </div>
+                    <div class="nap-item">
+                        <h3>🥈 Next Best</h3>
+                        <div id="nextBestHorse" class="horse-name">-</div>
+                        <div id="nextBestDetails" class="details">-</div>
+                        <div id="nextBestScore" class="power-score">-</div>
+                    </div>
+                    <div class="nap-item">
+                        <h3>💎 Value Pick</h3>
+                        <div id="valueHorse" class="horse-name">-</div>
+                        <div id="valueDetails" class="details">-</div>
+                        <div id="valueOdds" class="power-score">-</div>
+                    </div>
+                </div>
+            </div>
+            <div id="racesGrid" class="races-grid"></div>
+            <div class="strategy-section">
+                <h2>💰 استراتيجية المراهنة</h2>
+                <div class="strategy-grid">
+                    <div class="strategy-card">
+                        <h3>⚖️ Balanced (متوازنة)</h3>
+                        <p id="balancedStrategy">-</p>
+                    </div>
+                    <div class="strategy-card aggressive">
+                        <h3>🔥 Aggressive (عدوانية)</h3>
+                        <p id="aggressiveStrategy">-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2026 Elghali AI Solutions - HorseMaster AI v2.0</p>
+            <p>⚠️ هذه الترشيحات للأغراض الترفيهية فقط</p>
+        </div>
+    </div>
+    
+    <script>
+        const tracks = {
+            'UAE': [
+                {value: 'meydan', text: 'Meydan Racecourse'},
+                {value: 'jebel_ali', text: 'Jebel Ali'},
+                {value: 'al_ain', text: 'Al Ain'},
+                {value: 'abu_dhabi', text: 'Abu Dhabi'},
+                {value: 'sharjah', text: 'Sharjah'}
+            ],
+            'UK': [
+                {value: 'wolverhampton', text: 'Wolverhampton'},
+                {value: 'kempton', text: 'Kempton Park'},
+                {value: 'lingfield', text: 'Lingfield Park'},
+                {value: 'newcastle', text: 'Newcastle'},
+                {value: 'southwell', text: 'Southwell'}
+            ],
+            'SAUDI_ARABIA': [{value: 'king_abdulaziz', text: 'King Abdulaziz Racecourse'}],
+            'QATAR': [{value: 'al_rayyan', text: 'Al Rayyan Racecourse'}]
+        };
+        
+        document.getElementById('raceDate').valueAsDate = new Date();
+        
+        function updateTracks() {
+            const country = document.getElementById('country').value;
+            const trackSelect = document.getElementById('track');
+            trackSelect.innerHTML = tracks[country].map(t => `<option value="${t.value}">${t.text}</option>`).join('');
+        }
+        updateTracks();
+        
+        async function getPredictions() {
+            const country = document.getElementById('country').value;
+            const trackId = document.getElementById('track').value;
+            const date = document.getElementById('raceDate').value;
+            
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('results').classList.remove('active');
+            
+            try {
+                const response = await fetch('/api/predict', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({country, track_id: trackId, date})
+                });
+                const data = await response.json();
+                displayResults(data);
+            } catch (error) {
+                alert('حدث خطأ في جلب الترشيحات');
+            } finally {
+                document.getElementById('loading').style.display = 'none';
+            }
+        }
+        
+        function displayResults(data) {
+            const nap = data.nap_of_the_day;
+            document.getElementById('napHorse').textContent = nap.horse_name;
+            document.getElementById('napDetails').textContent = `${nap.race} | ${nap.jockey} | ${nap.trainer}`;
+            document.getElementById('napScore').textContent = `Power: ${nap.power_score} | ${nap.win_probability}%`;
+            
+            const nextBest = data.next_best;
+            document.getElementById('nextBestHorse').textContent = nextBest.horse_name;
+            document.getElementById('nextBestDetails').textContent = nextBest.race;
+            document.getElementById('nextBestScore').textContent = `Power: ${nextBest.power_score}`;
+            
+            const valuePick = data.value_pick;
+            document.getElementById('valueHorse').textContent = valuePick.horse_name;
+            document.getElementById('valueDetails').textContent = valuePick.race;
+            document.getElementById('valueOdds').textContent = `Odds: ${valuePick.odds}`;
+            
+            document.getElementById('racesGrid').innerHTML = data.races.map(race => `
+                <div class="race-card">
+                    <div class="race-header">
+                        <h3>🏃 ${race.race_name}</h3>
+                        <span>${race.race_time}</span>
+                    </div>
+                    <div class="race-info">
+                        <span>📏 ${race.distance}m</span>
+                        <span>🏔️ ${race.surface}</span>
+                        <span>💧 ${race.going}</span>
+                    </div>
+                    <table class="predictions-table">
+                        <thead><tr><th>#</th><th>الحصان</th><th>الفارس</th><th>Power</th><th>%</th></tr></thead>
+                        <tbody>
+                            ${race.predictions.map(h => `<tr><td>${h.number}</td><td>${h.name}</td><td>${h.jockey}</td><td>${h.power_score}</td><td>${h.win_probability}%</td></tr>`).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            `).join('');
+            
+            document.getElementById('balancedStrategy').textContent = data.betting_strategy.balanced.description + ' - ' + data.betting_strategy.balanced.recommended_stake;
+            document.getElementById('aggressiveStrategy').textContent = data.betting_strategy.aggressive.description + ' - ' + data.betting_strategy.aggressive.recommended_stake;
+            
+            document.getElementById('results').classList.add('active');
+        }
+    </script>
+</body>
+</html>
